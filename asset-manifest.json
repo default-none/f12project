@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/f12project/static/js/main.e4fa0f9e.js",
-    "index.html": "/f12project/index.html",
-    "main.e4fa0f9e.js.map": "/f12project/static/js/main.e4fa0f9e.js.map"
+    "main.js": "/default-none/f12project.git/static/js/main.e4fa0f9e.js",
+    "index.html": "/default-none/f12project.git/index.html",
+    "main.e4fa0f9e.js.map": "/default-none/f12project.git/static/js/main.e4fa0f9e.js.map"
   },
   "entrypoints": [
     "static/js/main.e4fa0f9e.js"
