@@ -3,34 +3,24 @@ $colors: (
   bgc02: #433577,
   bgc03: #ffffff,
   bgc04: #d9d9d9,
-  font01: #33bbc5,
+  mFont01: #33bbc5,
   wFont01: #ffffff,
-  wFont02:
-    rgba(
-      $color: #ffffff,
-      $alpha: 0.6,
-    ),
-  wFont03:
-    rgba(
-      $color: #ffffff,
-      $alpha: 0.8,
-    ),
+  wFont02: rgba($color: #ffffff,
+    $alpha: 0.6,
+  ),
+  wFont03: rgba($color: #ffffff,
+    $alpha: 0.8,
+  ),
   bFont01: #111111,
-  bFont02:
-    rgba(
-      $color: #111111,
-      $alpha: 0.6,
-    ),
-  bFont03:
-    rgba(
-      $color: #111111,
-      $alpha: 0.7,
-    ),
-  bFont04:
-    rgba(
-      $color: #111111,
-      $alpha: 0.4,
-    ),
+  bFont02: rgba($color: #111111,
+    $alpha: 0.6,
+  ),
+  bFont03: rgba($color: #111111,
+    $alpha: 0.7,
+  ),
+  bFont04: rgba($color: #111111,
+    $alpha: 0.4,
+  ),
 );
 
 //colorSizeWeight;
@@ -54,6 +44,18 @@ $colors: (
 }
 
 @mixin b48b {
+  font-size: 48px;
+  color: map-get($map: $colors, $key: bFont01);
+  font-weight: 700;
+}
+
+@mixin w40b {
+  font-size: 48px;
+  color: map-get($map: $colors, $key: wFont01);
+  font-weight: 700;
+}
+
+@mixin b40b {
   font-size: 48px;
   color: map-get($map: $colors, $key: bFont01);
   font-weight: 700;
@@ -113,7 +115,7 @@ $colors: (
 
 @mixin b18r {
   font-size: 18px;
-  color: map-get($map: $colors, $key: bfont01);
+  color: map-get($map: $colors, $key: bont01);
   font-weight: 400;
 }
 
@@ -125,27 +127,58 @@ $colors: (
 
 @mixin b18l {
   font-size: 18px;
-  color: map-get($map: $colors, $key: bfont01);
+  color: map-get($map: $colors, $key: bFont01);
   font-weight: 300;
 }
 
 @mixin w16b {
   font-size: 16px;
-  color: map-get($map: $colors, $key: bfont01);
-  font-weight: 300;
+  color: map-get($map: $colors, $key: wFont01);
+  font-weight: 700;
 }
 
 @mixin m16b {
   font-size: 16px;
-  color: map-get($map: $colors, $key: mfont01);
-  font-weight: 300;
+  color: map-get($map: $colors, $key: mFont01);
+  font-weight: 700;
 }
+
+@mixin w16r {
+  font-size: 16px;
+  color: map-get($map: $colors, $key: wFont01);
+  font-weight: 400;
+}
+
+@mixin w14b {
+  font-size: 14px;
+  color: map-get($map: $colors, $key: wFont01);
+  font-weight: 700;
+}
+
+@mixin w14r {
+  font-size: 14px;
+  color: map-get($map: $colors, $key: wFont01);
+  font-weight: 400;
+}
+
+@mixin b14b {
+  font-size: 14px;
+  color: map-get($map: $colors, $key: bFont01);
+  font-weight: 700;
+}
+
+@mixin b14r {
+  font-size: 14px;
+  color: map-get($map: $colors, $key: bFont01);
+  font-weight: 400;
+}
+
+
 
 //ST : ScreenType;
 @mixin screenProtector {
   width: 100%;
   height: 100%;
-  background-color: map-get($map: colors, $key: blackType2);
 }
 
 @mixin screenType1 {
@@ -161,24 +194,6 @@ $colors: (
   align-items: center;
 }
 
-//반응형
-@mixin mobile {
-  @media (max-width: 768px) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media (min-width: 769px) and (max-width: 1024px) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: 1025px) and (max-width: 1440px) {
-    @content;
-  }
-}
 
 //ST : ScreenType;
 @mixin screenProtector {
@@ -199,11 +214,13 @@ $colors: (
 }
 
 //반응형
-@mixin mobile2 {
+@mixin mobileS {
   @media (max-width: 460px) {
+    @content;
   }
 }
-@mixin mobile {
+
+@mixin mobileF {
   @media (min-width: 461px) and (max-width: 768px) {
     @content;
   }

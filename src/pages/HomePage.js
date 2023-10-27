@@ -1,3 +1,4 @@
+import './HomePage.scss';
 import BookingSection from '../components/layers/home/BookingSection';
 import EventSection from '../components/layers/home/EventSection';
 import GallerySection from '../components/layers/home/GallerySection';

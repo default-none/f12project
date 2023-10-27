@@ -1,141 +1,219 @@
-// @import '../style/mixin';
-// section{
-//     width: 100%;
-//     height: 100vh;
-// }
+@import '../style/mixin';
 
-// .guideSection{
-//     .moon{
-//         width: 310px;
-//         height: 270px;
-//         background: url(../asset/img/moon.png);
-//         background-size: cover;
-//         position: absolute;
-//         top: 110px;
-//         left: 1450px;
-//         z-index: 1000000000000000;
-//         opacity: 0.8;
-//     }
-//     .yw{
-//         width: 100%;
-//         height: 90px;
-//         position: absolute;
-//         top: 0;
-//         border-bottom: 1px solid white;
-//     }
-//     background: url(../asset/img/all_bg.png);
-//     background-color: #1E154E;
-//     .sectionScreen{
-//         @include screenType1;
-//         height: 100vh;
-//         flex-direction: column;
-//         .fontWrap{
-//             width: 100%;
-//             display: flex;
-//             justify-content: space-between;
-//             .fontWrapL{
-//             margin-top: 195px;
-//             z-index: 100;
-//             h2{
-//                 @include w120eb ;
-//                 margin-bottom : 50px;
-//             }
-//             h3{
-//                 @include w36eb;
-//                 margin-bottom : 20px;
-//                 z-index : 2;
-//             }
-//             p{
-//                 @include w18r;
-//                 z-index : 2;
-//             }
-//         }
-//             .fontWrapR{
-//                 margin-top: 650px;
-//                 display: flex;
-//                 flex-direction: column;
-//                 align-items: end;
-//                 p{  width: 500px;
-//                     text-align: end;
-//                     color: white;
-//                     font-size: 24px;
-//                     margin-bottom: 20px;
-//                     border-bottom: 1px solid white;
-//                 }
-//             }
-//         }
-// }
-//     .guideScreenWrap{
-//         width: 1280px;
-//         height: 680px;
-//         position: absolute;
-//         left: 0; bottom: 0;
-//     }
-//     .k{
-//         background: url(../asset/img/guide_k.png);
-//         background-size: cover;
-//         z-index: 10;
-//     }
-//     .d{
-//         background: url(../asset/img/guide_c.png);
-//         background-size: cover;
-//         display: none;
-//     }
-//     .c{
-//         background: url(../asset/img/guide_d.png);
-//         background-size: cover;
-//         display: none;
-//     }
 
-//     @include desktop{
-//         width: 100%;
-//         padding: 0px 50px;
-//         .sectionScreen{
-//             width: 100%;
-//             .fontWrap{
-//                 .fontWrapL{
-//                     p{
-//                      width: 450px;
-//                     }
-//                 }
-//             }
-//         }
-//         .guideScreenWrap{
-//             width: 68%;
-//         }
-//     }
+.guideSection{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    .moon{
+        width: 310px;
+        height: 270px;
+        background: url(../asset/img/moon.png);
+        background-size: cover;
+        position: absolute;
+        top: 110px;
+        left: 1450px;
+        z-index: 1000000000000000;
+        opacity: 0.8;
+    }
+    .yw{
+        width: 100%;
+        height: 90px;
+        position: absolute;
+        top: 0;
+        border-bottom: 1px solid white;
+    }
+    background: url(../asset/img/all_bg.png);
+    background-color: #1E154E;
+    .sectionScreen{
+        @include screenType1;
+        height: 100vh;
+        flex-direction: column;
+        .fontWrap{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .fontWrapL{
+            margin-top: 195px;
+            z-index: 100;
+            h2{
+                @include w120eb ;
+                margin-bottom : 50px;
+            }
+            h3{
+                @include w36eb;
+                margin-bottom : 20px;
+                z-index : 2;
+            }
+            p{
+                @include w18r;
+                z-index : 2;
+            }
+        }
+            .fontWrapR{
+                margin-top: 650px;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                p{ 
+                    text-align: end;
+                    color: white;
+                    font-size: 24px;
+                }
+            }
+        }
+}
+    .guideScreenWrap{
+        width: 65%;
+        height: 680px;
+        position: absolute;
+        left: 0; bottom: 0;
+    }
+    .k{
+        background: url(../asset/img/guide_k.png);
+        background-size: cover;
+        z-index: 10;
+    }
+    .d{
+        background: url(../asset/img/guide_c.png);
+        background-size: cover;
+        display: none;
+    }
+    .c{
+        background: url(../asset/img/guide_d.png);
+        background-size: cover;
+        display: none;
+    }
 
-//     @include tablet{
-//         .sectionScreen{
-//             width: 100%;
-//             .fontWrap{
-//                 margin-top: 85px;
-//                 flex-direction: column;
-//                 text-align: center;
-//                 width: min-content;
-//                 .fontWrapL{
-//                     margin-top: 90px;
-//                     h2{
-//                         @include w48b;
-//                         margin-bottom:20px;
-//                     }
-//                     h3{
-//                         @include w24eb
-//                     }
-//                 }
-//                 .fontWrapR{
-//                     margin: 50px 0;
-//                     p{
-//                         @include w18r;
-//                     }
-//                 }
+    @include desktop{
+        width: 100%;
+        padding: 0px 50px;
+        .sectionScreen{
+            width: 100%;
+        }
+        .guideScreenWrap{
+            width: 68%;
+        }
+    }
+
+    @include tablet{
+        .sectionScreen{
+            width: 100%;
+            .fontWrap{
+                margin-top: 217px;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                .fontWrapL{
+                    margin-top: 0px;
+                    h2{
+                        @include w48b;
+                        margin-bottom:20px;
+                    }
+                    h3{
+                        @include w24eb
+                    }
+                }
+                .fontWrapR{
+                    margin: 50px 0 0 0;
+                    flex-direction: row;
+                    p{
+                        @include w18r;
+                        text-align: center;
+                        padding: 0 20px;
+                    }
+                }
             
-//             }
-//         }
-//         .guideScreenWrap{
-//             max-width: 1024px;
-//             height: 668px;;
-//         }
-//     }
-// }
+            }
+        }
+        .guideScreenWrap{
+            width: 100%;
+            height: 50%;
+        }
+    }
+
+    @include mobileF{
+        .sectionScreen{
+            width: 100%;
+            .fontWrap{
+                justify-content: end;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-top: 178px;
+                .fontWrapL{
+                    margin-top: 0px;
+                    h2{
+                        @include w40b;
+                        margin-bottom:15px;
+                    }
+                    h3{
+                        @include w24eb;
+                        margin-bottom : 15px;
+                    }
+                    p{
+                       @include  w16r
+                    }
+                }
+                .fontWrapR{
+                    flex-direction: row;
+                    margin: 15px 0 0 0;
+                    p{
+                        @include w18r;
+                        text-align: center;
+                        border: none;
+                        padding: 0px 15px;
+                    }
+                }
+            }
+        }
+        .guideScreenWrap{
+            width: 100%;
+            height: 60%;
+        }
+    }
+
+    @include mobileS{
+        .sectionScreen{
+            width: 100%;
+            .fontWrap{
+                justify-content: end;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-top: 180px;
+                .fontWrapL{
+                    margin-top: 0px;
+                    h2{
+                        @include font32b;
+                        color: white;
+                        margin-bottom:15px;
+                    }
+                    h3{
+                        @include w18b;
+                        margin-bottom : 15px;
+                    }
+                    p{
+                       @include  w14r
+                    }
+                }
+                .fontWrapR{
+                    flex-direction: row;
+                    margin: 15px 0 0 0;
+                    p{
+                        @include w14r;
+                        text-align: center;
+                        border: none;
+                        padding: 0 15px;
+                    }
+                }
+            }
+        }
+        .guideScreenWrap{
+            width: 100%;
+            height: 482px;
+        }
+    }
+}
 
