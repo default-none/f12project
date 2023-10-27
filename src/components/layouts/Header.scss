@@ -1,0 +1,66 @@
+@import '../../style/mixin';
+
+header {
+    width: 100%;
+    border-bottom: 1px solid white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+
+    .headerScreen {
+        @include screenType1;
+        justify-content: space-between;
+        height: 90px;
+
+        h1 {
+
+            i {
+                display: block;
+                width: 132px;
+                height: 52px;
+                background: url(../../asset/img/icon.png);
+                background-position: 0px -130px;
+            }
+        }
+
+        .gnb {
+            ul {
+                display: flex;
+
+                li {
+                    margin: 0 30px;
+
+                    a {
+                        @include w18r;
+                    }
+
+                    .lnb {
+                        position: absolute;
+                        top: 150px;
+
+                        li {
+                            margin: 20px 0;
+                            @include w16r;
+                        }
+                    }
+                }
+            }
+        }
+
+        .unb {
+            ul {
+                display: flex
+            }
+
+            li {
+                margin-left: 10px;
+
+                a {
+                    @include w16r;
+                }
+            }
+        }
+
+    }
+}

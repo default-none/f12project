@@ -1,22 +1,42 @@
 @import '../asset/font/font';
-html{
+
+html {
     font-family: 'NotoSansKR';
 }
 
-*{
+* {
     box-sizing: border-box;
 }
-h1, h2, h3, h4, p, body, main, section{
+
+h1,
+h2,
+h3,
+h4,
+p,
+body,
+main,
+section,
+ul,
+ol {
     margin: 0;
     padding: 0;
 }
-ul,ol{
+
+ul,
+ol {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
-p{
+
+p {
     line-height: 1.7;
     letter-spacing: -1px;
+}
+
+.App {
+    background-color: black;
+    height: 100000px;
 }

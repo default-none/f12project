@@ -1,141 +1,168 @@
-// @import '../style/mixin';
-// section{
-//     width: 100%;
-//     height: 100vh;
-// }
+@import '../style/mixin';
 
-// .guideSection{
-//     .moon{
-//         width: 310px;
-//         height: 270px;
-//         background: url(../asset/img/moon.png);
-//         background-size: cover;
-//         position: absolute;
-//         top: 110px;
-//         left: 1450px;
-//         z-index: 1000000000000000;
-//         opacity: 0.8;
-//     }
-//     .yw{
-//         width: 100%;
-//         height: 90px;
-//         position: absolute;
-//         top: 0;
-//         border-bottom: 1px solid white;
-//     }
-//     background: url(../asset/img/all_bg.png);
-//     background-color: #1E154E;
-//     .sectionScreen{
-//         @include screenType1;
-//         height: 100vh;
-//         flex-direction: column;
-//         .fontWrap{
-//             width: 100%;
-//             display: flex;
-//             justify-content: space-between;
-//             .fontWrapL{
-//             margin-top: 195px;
-//             z-index: 100;
-//             h2{
-//                 @include w120eb ;
-//                 margin-bottom : 50px;
-//             }
-//             h3{
-//                 @include w36eb;
-//                 margin-bottom : 20px;
-//                 z-index : 2;
-//             }
-//             p{
-//                 @include w18r;
-//                 z-index : 2;
-//             }
-//         }
-//             .fontWrapR{
-//                 margin-top: 650px;
-//                 display: flex;
-//                 flex-direction: column;
-//                 align-items: end;
-//                 p{  width: 500px;
-//                     text-align: end;
-//                     color: white;
-//                     font-size: 24px;
-//                     margin-bottom: 20px;
-//                     border-bottom: 1px solid white;
-//                 }
-//             }
-//         }
-// }
-//     .guideScreenWrap{
-//         width: 1280px;
-//         height: 680px;
-//         position: absolute;
-//         left: 0; bottom: 0;
-//     }
-//     .k{
-//         background: url(../asset/img/guide_k.png);
-//         background-size: cover;
-//         z-index: 10;
-//     }
-//     .d{
-//         background: url(../asset/img/guide_c.png);
-//         background-size: cover;
-//         display: none;
-//     }
-//     .c{
-//         background: url(../asset/img/guide_d.png);
-//         background-size: cover;
-//         display: none;
-//     }
+section {
+    width: 100%;
+    height: 100vh;
+}
 
-//     @include desktop{
-//         width: 100%;
-//         padding: 0px 50px;
-//         .sectionScreen{
-//             width: 100%;
-//             .fontWrap{
-//                 .fontWrapL{
-//                     p{
-//                      width: 450px;
-//                     }
-//                 }
-//             }
-//         }
-//         .guideScreenWrap{
-//             width: 68%;
-//         }
-//     }
+.guideSection {
+    .moon {
+        width: 310px;
+        height: 270px;
+        background: url(../asset/img/moon.png);
+        background-size: cover;
+        position: absolute;
+        top: 110px;
+        left: 1450px;
+        z-index: 1000000000000000;
+        opacity: 0.8;
+    }
 
-//     @include tablet{
-//         .sectionScreen{
-//             width: 100%;
-//             .fontWrap{
-//                 margin-top: 85px;
-//                 flex-direction: column;
-//                 text-align: center;
-//                 width: min-content;
-//                 .fontWrapL{
-//                     margin-top: 90px;
-//                     h2{
-//                         @include w48b;
-//                         margin-bottom:20px;
-//                     }
-//                     h3{
-//                         @include w24eb
-//                     }
-//                 }
-//                 .fontWrapR{
-//                     margin: 50px 0;
-//                     p{
-//                         @include w18r;
-//                     }
-//                 }
-            
-//             }
-//         }
-//         .guideScreenWrap{
-//             max-width: 1024px;
-//             height: 668px;;
-//         }
-//     }
-// }
+    .yw {
+        width: 100%;
+        height: 90px;
+        position: absolute;
+        top: 0;
+        border-bottom: 1px solid white;
+    }
 
+    background: url(../asset/img/all_bg.png);
+    background-color: #1E154E;
+
+    .sectionScreen {
+        @include screenType1;
+        height: 100vh;
+        flex-direction: column;
+
+        .fontWrap {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .fontWrapL {
+                margin-top: 195px;
+                z-index: 100;
+
+                h2 {
+                    @include w120eb;
+                    margin-bottom: 50px;
+                }
+
+                h3 {
+                    @include w36eb;
+                    margin-bottom: 20px;
+                    z-index: 2;
+                }
+
+                p {
+                    @include w18r;
+                    z-index: 2;
+                }
+            }
+
+            .fontWrapR {
+                margin-top: 650px;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+
+                p {
+                    width: 500px;
+                    text-align: end;
+                    color: white;
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                    border-bottom: 1px solid white;
+                }
+            }
+        }
+    }
+
+    .guideScreenWrap {
+        width: 1280px;
+        height: 680px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .k {
+        background: url(../asset/img/guide_k.png);
+        background-size: cover;
+        z-index: 10;
+    }
+
+    .d {
+        background: url(../asset/img/guide_c.png);
+        background-size: cover;
+        display: none;
+    }
+
+    .c {
+        background: url(../asset/img/guide_d.png);
+        background-size: cover;
+        display: none;
+    }
+
+    @include desktop {
+        width: 100%;
+        padding: 0px 50px;
+
+        .sectionScreen {
+            width: 100%;
+
+            .fontWrap {
+                .fontWrapL {
+                    p {
+                        width: 450px;
+                    }
+                }
+            }
+        }
+
+        .guideScreenWrap {
+            width: 68%;
+        }
+    }
+
+    @include tablet {
+        .sectionScreen {
+            width: 100%;
+
+            .fontWrap {
+                margin-top: 85px;
+                flex-direction: column;
+                text-align: center;
+                width: min-content;
+
+                .fontWrapL {
+                    margin-top: 90px;
+
+                    h2 {
+                        @include w48b;
+                        margin-bottom: 20px;
+                    }
+
+                    h3 {
+                        @include w24eb
+                    }
+                }
+
+                .fontWrapR {
+                    margin: 50px 0;
+
+                    p {
+                        @include w18r;
+                    }
+                }
+
+            }
+        }
+
+        .guideScreenWrap {
+            max-width: 1024px;
+            height: 668px;
+            ;
+        }
+    }
+}
