@@ -8,21 +8,25 @@ import NoticePage from './pages/NoticePage';
 import UsersPage from './pages/UsersPage';
 import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
+import { Suspense } from 'react';
+import LoadingScreen from './pages/LoadingScreen';
 
 function App() {
   return (
-    <div className="App">
-      <Header></Header>
-      <Routes>
-        <Route path="/" element={<HomePage />}></Route>
-        <Route path="/guide" element={<GuidePage></GuidePage>}></Route>
-        <Route path="/program" element={<ProgramPage></ProgramPage>}></Route>
-        <Route path="/gallery" element={<GalleryPage></GalleryPage>}></Route>
-        <Route path="/notice" element={<NoticePage></NoticePage>}></Route>
-        <Route path="/users" element={<UsersPage />}></Route>
-      </Routes>
-      <Footer></Footer>
-    </div>
+    <Suspense fallback={<LoadingScreen />}>
+      <div className="App">
+        <Header/>
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/guide" element={<GuidePage></GuidePage>}></Route>
+          <Route path="/program" element={<ProgramPage></ProgramPage>}></Route>
+          <Route path="/gallery" element={<GalleryPage></GalleryPage>}></Route>
+          <Route path="/notice" element={<NoticePage></NoticePage>}></Route>
+          <Route path="/users" element={<UsersPage />}></Route>
+        </Routes>
+        <Footer/>
+      </div>
+    </Suspense>
   );
 }
 

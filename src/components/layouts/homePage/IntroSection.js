@@ -1,5 +1,3 @@
-const IntroSection = () => {
-  return <section className="IntroSection"></section>;
-};
+const IntroSection = () => {};
 
 export default IntroSection;

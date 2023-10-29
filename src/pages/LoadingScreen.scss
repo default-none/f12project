@@ -1,0 +1,42 @@
+.LoadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; // 필요한 배경색으로 설정
+  z-index: 1000; // 다른 요소 위에 로딩 스크린이 나타나도록 z-index 설정\\
+}
+
+.LoadingScreen.loaded .door.left {
+    transform: translateX(-101%) rotateY(-90deg);
+    transition: transform 1.5s ease-in;
+  }
+  
+  .LoadingScreen.loaded .door.right {
+    transform: translateX(101%) rotateY(90deg);
+    transition: transform 1.5s  ease-in;
+    
+  }
+  
+.door {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+}
+
+.door.left {
+  left: 0;
+  background: url(../asset/img/LoaderLeft.png);
+  background-size: cover;
+}
+
+.door.right {
+  right: 0;
+  background-image: url(../asset/img/LoaderRight.png);
+  background-size: cover;
+}
