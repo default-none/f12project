@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Header.scss';
 import { Link } from 'react-router-dom';
 import { menuItems } from '../datas/LocalList';
@@ -9,14 +9,42 @@ const Header = () => {
     setIsSignIn(!isSignIn);
   };
 
-  const [isNavToggle, setIsNavToggle] = useState(false);
-  const ToggleHandler = () => {
-    setIsNavToggle(!isNavToggle);
-  };
   const [isViewNav, setIsViewNav] = useState(false);
   const menuViewHandler = () => {
     setIsViewNav(!isViewNav);
   };
+
+  const [isNavToggle, setIsNavToggle] = useState(false);
+  const ToggleHandler = () => {
+    setIsNavToggle(!isNavToggle);
+  };
+
+  const [isLnbItem, setIsLnbItem] = useState();
+  const ShowLnbHandler = (index) => {
+    if (index === isLnbItem) {
+      setIsLnbItem(undefined);
+    } else {
+      setIsLnbItem(index);
+    }
+  };
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (windowWidth > 1024) {
+      setIsNavToggle(false);
+    }
+  }, [windowWidth]);
+
   return (
     <header
       onMouseEnter={menuViewHandler}
@@ -35,19 +63,22 @@ const Header = () => {
         <h1 className="logoWrap">
           <i></i>
         </h1>
-        <nav className={isNavToggle ? 'gnb' : 'Off'}>
+        <nav className={isNavToggle ? 'gnb' : 'gnb Off'}>
           <ul>
-            {menuItems.map((menuItems, index) => (
+            {menuItems.map((category, index) => (
               <li key={index}>
-                <div className="gList">
-                  <Link>{menuItems.pageList}</Link>
+                <div onClick={() => ShowLnbHandler(index)} className="gList">
+                  <Link to={category.link}>{category.category}</Link>
                 </div>
-
-                <ol className="lnb">
-                  {menuItems.detailList.map((detailList, detailIndex) => (
-                    <li key={detailIndex}>
-                      <Link>
-                        {detailList}
+                <ol
+                  className={
+                    index === isLnbItem ? 'lnb clickLnb' : 'lnb notClickLnb'
+                  }
+                >
+                  {category.items.map((item, itemIndex) => (
+                    <li key={itemIndex}>
+                      <Link to={item.link}>
+                        {item.name}
                         <div className="liner"></div>
                       </Link>
                     </li>
@@ -57,7 +88,7 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <nav className={isNavToggle ? 'unb' : 'Off'}>
+        <nav className={isNavToggle ? 'unb' : 'unb Off'}>
           <ul>
             {isSignIn ? (
               <li onClick={SignInHandler}>
@@ -86,48 +117,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// import './Header.scss';
-// import { Link } from 'react-router-dom';
-// const Header = () => {
-//   return (
-//     <header className="Header">
-//       <div className="headerScreen">
-//         <h1 className="logoWrap">
-//           <i></i>
-//         </h1>
-//         <nav className="gnb">
-//           <ul>
-//             <li>
-//               <Link>행사안내</Link>
-//             </li>
-//             <li>
-//               <Link>프로그램</Link>
-//             </li>
-//             <li>
-//               <Link>갤러리</Link>
-//             </li>
-//             <li>
-//               <Link>예약하기</Link>
-//             </li>
-//             <li>
-//               <Link>알림마당</Link>
-//             </li>
-//           </ul>
-//         </nav>
-//         <nav className="unb">
-//           <ul>
-//             <li>
-//               <Link>로그인</Link>
-//             </li>
-//             <li>
-//               <Link>회원가입</Link>
-//             </li>
-//           </ul>
-//         </nav>
-//       </div>
-//     </header>
-//   );
-// };
-
-// export default Header;

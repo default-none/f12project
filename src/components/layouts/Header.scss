@@ -1,235 +1,220 @@
 @import '../../style/mixin';
 
-
 header {
-    width: 100%;
-    border-bottom: 1px solid white;
-    position: fixed;
-    top: 0;
-    left: 0;
+  width: 100%;
+  border-bottom: 1px solid white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 90px;
+  text-align: center;
+  z-index: 100;
+  transition: 1s;
+  overflow: hidden;
+
+  .headerScreen {
+    @include screenType1;
+    justify-content: space-between;
     height: 90px;
-    text-align: center;
-    z-index: 100;
-    transition: 1s;
-    overflow: hidden;
 
+    h1 {
+      i {
+        display: block;
+        width: 132px;
+        height: 52px;
+        background: url(../../asset/img/icon.png);
+        background-position: 0px -130px;
+      }
+    }
+
+    .gnb {
+      ul {
+        display: flex;
+
+        li {
+          width: 85px;
+          position: relative;
+          margin: 0 30px;
+
+          a {
+            @include w18r;
+            display: block;
+            transition: 0.5s;
+
+            &:hover {
+              color: map-get($map: $colors, $key: mFont01);
+            }
+          }
+        }
+
+        .gList {
+          height: 90px;
+          line-height: 90px;
+          transition: 0.5s;
+        }
+
+        .lnb {
+          position: absolute;
+          transition: 1.5s;
+          top: 100%;
+          left: 0;
+          transition-delay: 0.5s;
+
+          li {
+            margin: 20px 0;
+            @include w16r;
+
+            .liner {
+              width: 0;
+              height: 1px;
+              transition: 1s;
+              margin-top: 5px;
+            }
+
+            &:hover {
+              .liner {
+                background-color: map-get($map: $colors, $key: mFont01);
+
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .unb {
+      ul {
+        display: flex;
+        margin-right: 20px;
+      }
+
+      li {
+        margin-left: 10px;
+
+        a {
+          @include w16r;
+        }
+      }
+    }
+
+    button {
+      background: none;
+      border: none;
+      outline: none;
+      position: relative;
+      width: 30px;
+      height: 25px;
+      display: none;
+
+      .navBtn {
+        width: 100%;
+        height: 100%;
+
+        div {
+          position: absolute;
+          background-color: white;
+          width: 30px;
+          height: 2px;
+          transition: 1s;
+        }
+
+        .offNavFirst {
+          top: 0;
+        }
+
+        .offNavSecond {
+          top: 50%;
+        }
+
+        .offNavLast {
+          top: 100%;
+        }
+
+        .onNavFirst {
+          top: 50%;
+          rotate: 45deg;
+        }
+
+        .onNavSecond {
+          top: 50%;
+          opacity: 0;
+        }
+
+        .onNavLast {
+          top: 50%;
+          rotate: -45deg;
+        }
+      }
+    }
+  }
+
+  @include desktop {
     .headerScreen {
-        @include screenType1;
-        justify-content: space-between;
-        height: 90px;
-
-
-        h1 {
-
-            i {
-                display: block;
-                width: 132px;
-                height: 52px;
-                background: url(../../asset/img/icon.png);
-                background-position: 0px -130px;
-            }
-        }
-
-        .gnb {
-            ul {
-                display: flex;
-
-                li {
-                    width: 85px;
-                    position: relative;
-                    margin: 0 30px;
-
-                    a {
-                        @include w18r;
-                        display: block;
-                        transition: 0.5s;
-
-
-                        &:hover {
-                            color: map-get($map: $colors, $key: mFont01);
-                        }
-
-
-
-
-                    }
-                }
-
-                .gList {
-                    height: 90px;
-                    line-height: 90px;
-                    transition: 0.5s;
-                }
-
-
-                .lnb {
-                    position: absolute;
-                    transition: 1.5s;
-                    top: 100%;
-                    left: 0;
-                    transition-delay: 0.5s;
-
-                    li {
-                        margin: 20px 0;
-                        @include w16r;
-
-                        .liner {
-                            width: 0;
-                            height: 1px;
-                            transition: 1s;
-                            margin-top: 5px;
-                        }
-
-                        &:hover {
-                            .liner {
-                                background-color: map-get($map: $colors, $key: mFont01);
-
-                                width: 100%
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .unb {
-            ul {
-                display: flex;
-                margin-right: 20px;
-            }
-
-            li {
-                margin-left: 10px;
-
-                a {
-                    @include w16r;
-                }
-            }
-        }
-
-        button {
-            background: none;
-            border: none;
-            outline: none;
-            position: relative;
-            width: 30px;
-            height: 25px;
-            display: none;
-
-            .navBtn {
-                width: 100%;
-                height: 100%;
-
-
-                div {
-                    position: absolute;
-                    background-color: white;
-                    width: 30px;
-                    height: 2px;
-                    transition: 1s;
-                }
-
-                .offNavFirst {
-                    top: 0;
-                }
-
-                .offNavSecond {
-                    top: 50%;
-                }
-
-                .offNavLast {
-                    top: 100%;
-                }
-
-                .onNavFirst {
-                    top: 50%;
-                    rotate: 45deg;
-                }
-
-                .onNavSecond {
-                    top: 50%;
-                    opacity: 0;
-                }
-
-                .onNavLast {
-                    top: 50%;
-                    rotate: -45deg;
-                }
-            }
-        }
+      width: 100%;
     }
+  }
 
-    @include desktop {
-        .headerScreen {
+  @include tablet {
+    .headerScreen {
+      h1 {
+        margin-left: 50px;
+      }
+
+      .gnb {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        ul {
+          flex-direction: column;
+
+          li {
+            overflow: hidden;
             width: 100%;
+            margin: 0;
+
+            .gList {
+              border-bottom: 1px solid white;
+            }
+
+            .clickLnb {
+              height: 200px;
+            }
+            .notClickLnb{
+                height: 0px;
+            }
+            .lnb {
+              position: static;
+              transition: 1s;
+            }
+          }
         }
+      }
+
+      .Off {
+        display: none;
+      }
+
+      button {
+        margin-right: 50px;
+        display: block;
+      }
+
+      .unb {
+        position: absolute;
+        bottom: 0;
+      }
     }
-
-    @include tablet {
-
-        .headerScreen {
-            h1 {
-                margin-left: 50px;
-            }
-
-            .gnb {
-                position: absolute;
-                width: 100%;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-
-                ul {
-                    flex-direction: column;
-
-                    li {
-                        overflow: hidden;
-                        width: 100%;
-                        margin: 0;
-
-                        .gList {
-                            border-bottom: 1px solid white;
-                        }
-
-                        &:hover {
-
-                            .lnb {
-                                height: 200px;
-                            }
-                        }
-
-                        .lnb {
-                            position: static;
-                            height: 0px;
-                            transition: 1s;
-                        }
-                    }
-                }
-
-            }
-
-
-            .Off {
-                display: none;
-            }
-
-            button {
-                margin-right: 50px;
-                display: block;
-            }
-
-            .unb {
-                position: absolute;
-                bottom: 0;
-            }
-        }
-    }
+  }
 }
 
 .onHead {
-    height: 280px;
+  height: 280px;
 
-    @include tablet {
-        height: 100vh;
-    }
+  @include tablet {
+    height: 100vh;
+  }
 }
