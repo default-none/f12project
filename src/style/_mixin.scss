@@ -149,10 +149,32 @@ $colors: (
   font-weight: 400;
 }
 
+// //ST : ScreenType;
+// @mixin screenProtector {
+//   width: 100%;
+//   height: 100%;
+// }
+
+// @mixin screenType1 {
+//   width: 1440px;
+//   margin: 0 auto;
+//   display: flex;
+//   align-items: center;
+// }
+
+// @mixin screenType2 {
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+// }
+
+
+
 //ST : ScreenType;
 @mixin screenProtector {
   width: 100%;
   height: 100%;
+  background-color: map-get($map: colors, $key: blackType2);
 }
 
 @mixin screenType1 {
@@ -165,10 +187,15 @@ $colors: (
 @mixin screenType2 {
   width: 100%;
   display: flex;
-  align-items: center;
 }
 
 //반응형
+@mixin mobile2 {
+  @media (max-width: 460px) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media (max-width: 768px) {
     @content;
@@ -176,54 +203,13 @@ $colors: (
 }
 
 @mixin tablet {
-  @media (min-width: 769px) and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: 1025px) and (max-width: 1440px) {
-    @content;
-  }
-}
-
-//ST : ScreenType;
-@mixin screenProtector {
-  width: 100%;
-  height: 100%;
-  background-color: map-get($map: colors, $key: blackType2);
-}
-
-@mixin ScreenType1 {
-  width: 1440px;
-  margin: 0 auto;
-  display: flex;
-}
-
-@mixin ScreenType2 {
-  width: 100%;
-  display: flex;
-}
-
-//반응형
-@mixin mobile2 {
-  @media (max-width: 460px) {}
-}
-
-@mixin mobile {
-  @media (min-width: 461px) and (max-width: 768px) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media (min-width: 769px) and (max-width: 1024px) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: 1025px) and (max-width: 1440px) {
+  @media (max-width: 1440px) {
     @content;
   }
 }

@@ -9,19 +9,25 @@
   align-items: center;
   overflow: hidden; // 필요한 배경색으로 설정
   z-index: 1000; // 다른 요소 위에 로딩 스크린이 나타나도록 z-index 설정\\
+  transition: 2s;
+}
+
+.LoadingScreen.loaded {
+  z-index: -1;
 }
 
 .LoadingScreen.loaded .door.left {
-    transform: translateX(-101%) rotateY(-90deg);
-    transition: transform 1.5s ease-in;
-  }
-  
-  .LoadingScreen.loaded .door.right {
-    transform: translateX(101%) rotateY(90deg);
-    transition: transform 1.5s  ease-in;
-    
-  }
-  
+  transform: translateX(-101%) rotateY(-90deg);
+  transition: transform 1.5s ease-in;
+
+}
+
+.LoadingScreen.loaded .door.right {
+  transform: translateX(101%) rotateY(90deg);
+  transition: transform 1.5s ease-in;
+
+}
+
 .door {
   position: absolute;
   top: 0;

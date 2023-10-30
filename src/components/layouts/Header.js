@@ -9,33 +9,55 @@ const Header = () => {
     setIsSignIn(!isSignIn);
   };
 
-  // const [isViewList, setIsViewList] = useState();
-  const menuViewHandler = () => {};
+  const [isNavToggle, setIsNavToggle] = useState(false);
+  const ToggleHandler = () => {
+    setIsNavToggle(!isNavToggle);
+  };
+  const [isViewNav, setIsViewNav] = useState(false);
+  const menuViewHandler = () => {
+    setIsViewNav(!isViewNav);
+  };
   return (
-    <header onMouseEnter={menuViewHandler} className="Header">
+    <header
+      onMouseEnter={menuViewHandler}
+      onMouseLeave={menuViewHandler}
+      className={
+        window.innerWidth > 1024
+          ? isViewNav
+            ? 'onHead'
+            : 'offHead'
+          : isNavToggle
+          ? 'onHead'
+          : 'offHead'
+      }
+    >
       <div className="headerScreen">
         <h1 className="logoWrap">
           <i></i>
         </h1>
-        <nav className="gnb">
+        <nav className={isNavToggle ? 'gnb' : 'Off'}>
           <ul>
             {menuItems.map((menuItems, index) => (
               <li key={index}>
-                <Link>{menuItems.pageList}</Link>
-                <nav className="lnb">
-                  <ol>
-                    {menuItems.detailList.map((detailList, detailIndex) => (
-                      <li key={detailIndex}>
-                        <Link>{detailList}</Link>
-                      </li>
-                    ))}
-                  </ol>
-                </nav>
+                <div className="gList">
+                  <Link>{menuItems.pageList}</Link>
+                </div>
+
+                <ol className="lnb">
+                  {menuItems.detailList.map((detailList, detailIndex) => (
+                    <li key={detailIndex}>
+                      <Link>
+                        {detailList}
+                        <div className="liner"></div>
+                      </Link>
+                    </li>
+                  ))}
+                </ol>
               </li>
             ))}
           </ul>
         </nav>
-        <nav className="unb">
+        <nav className={isNavToggle ? 'unb' : 'Off'}>
           <ul>
             {isSignIn ? (
               <li onClick={SignInHandler}>
@@ -51,6 +73,13 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+        <button onClick={ToggleHandler}>
+          <div className="navBtn">
+            <div className={isNavToggle ? 'onNavFirst' : 'offNavFirst'}></div>
+            <div className={isNavToggle ? 'onNavSecond' : 'offNavSecond'}></div>
+            <div className={isNavToggle ? 'onNavLast' : 'offNavLast'}></div>
+          </div>
+        </button>
       </div>
     </header>
   );

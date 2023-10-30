@@ -17,7 +17,7 @@ const menuItems = [
   },
   {
     pageList: '알림마당',
-    detailList: ['공지사항', '문의하기', '자주하는 질문'],
+    detailList: ['공지사항', '문의하기', 'FAQ'],
   },
 ];
 
