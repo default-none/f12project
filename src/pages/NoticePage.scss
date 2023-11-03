@@ -1,0 +1,422 @@
+@import '../style/mixin';
+
+.NoticePage{
+    width: 100%;
+    margin: 0 auto;
+    .subNoticeHeader{
+        position: relative;
+        width:100%;
+        height:400px;
+        background-color: #000000;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: url(../asset/img/subNoticeHeader.png) center;
+        background-size: cover;
+        .noticeTxt{
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            h1{
+                @include w48b;
+                margin-bottom: 30px
+            }
+            p{
+                @include w18b;
+            }
+        }
+    }
+    .noticeSection{
+        width: 1440px;
+        margin: 100px auto 200px;
+    .noticeBtn{
+        margin: 0 auto 50px;
+        width: 480px;
+        height: 50px;
+        background-color: #EBEBEB;
+        border-radius: 1000px;
+        display: flex;
+        position: relative;
+        .noticeBtnColor{
+            width: calc(480px /3);
+            height: 50px;
+            background-color: #33BBC5;
+            position: absolute;
+            left: 0;
+            border-radius: 1000px;
+        }
+        div{
+            display: flex;
+            width: 100%;
+            position: absolute;
+            z-index: 5555555555555;
+            top: 0;
+            left: 0;
+            p{
+                width: calc(100% / 3);
+                height: 100%;
+                text-align: center;
+                line-height: 50px;
+            }
+        }
+    }
+    .noticeWrap{
+    table{
+        width: 100%;
+        thead{
+            background-color: #111111;
+            color: white;
+            tr{
+                width: 100%;
+                color: white;
+                th{
+                    padding: 20px;
+                    border-bottom: 1px solid #ddd;
+                }
+                th.num{
+                    width: 100px;  
+                }
+                th.title{
+                    width: 60%;  
+                }
+                th.view{
+                    width: 100px;  
+                }
+            }
+        }
+            tr{
+                width: 100%;
+                border: #ACACAC;
+                color: #111;
+                td{
+                    padding: 20px;
+                    border-bottom: 1px solid #ACACAC;
+                }
+                td.num{
+                    width: 100px;
+                    text-align: center;
+                }
+                td.title{
+                    width: 60%;  
+                }
+                td.date{
+                    text-align: center;
+                }
+                td.view{
+                    width: 100px;
+                    text-align: center;
+                }
+            }
+    }
+    .srcBox{
+        width: 1440px;
+        margin: 0 auto;
+        padding-top: 50px;
+            .inputBox{
+                display: flex;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+                div{
+                    position: relative;
+                input{
+                    display: block;
+                    width: 240px;
+                    height: 40px;
+                    margin-right: 5px;
+                    border: 1px solid #ACACAC;
+                    padding: 0px 10px;
+                }
+                a{
+                    background: url(../asset/img/icon_sch.jpg);
+                    background-size: cover;
+                    width: 20px; height: 20px;
+                    position: absolute;
+                    right: 15px;
+                    bottom: 12px;
+                }
+            }
+            select{
+                width: 80px;
+                height: 40px;
+                border: 1px solid #ACACAC;
+                padding: 0px 10px;
+            }
+            }
+        }
+    }
+    .qna{
+        width: 1280px;
+        margin: 0 auto;
+        ul{
+            border-top: 2px solid #111;
+            border-bottom: 2px solid #111;
+            li{ 
+                @include b18r;
+                display: flex;
+                border-bottom: 1px solid #ddd;
+                p{
+                    line-height: 75px;
+                    padding: 0 0 0 20px;
+                    color: #111;
+                }
+                .first{
+                    width: 250px;
+                }
+                div{
+                    padding: 10px;
+                    width: 100%;
+                    input{
+                        display: inline-block;
+                        height: 55px;
+                        width: 100%;
+                        border: 1px solid #ddd;
+                        padding: 0 0 0 20px;
+                    }
+                }
+                div{
+                    width: 100%;
+                    textarea{
+                        width: 100%;
+                        height:100px; 
+                        border: 1px solid #ddd;
+                        resize:none;/* 크기고정 */ 
+                        padding: 15px 0px 0 20px;
+                    }
+                }
+            }
+        }
+        .cont{
+            margin-top: 90px;
+            h2{
+                font-size: 40px;
+            }
+            .contTxt{
+                @include b18r;
+                margin: 20px 0 0 0;
+                padding: 20px;
+                border: 1px solid #ddd;
+                height: 400px;
+                overflow-y: scroll;
+            }
+            .checkWrap{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                margin-top: 10px;
+                p{
+                    margin-left: 5px;
+                }
+            }
+            .submitBtn{
+                width: 320px;
+                height: 56px;
+                background-color: #33BBC5;
+                margin: 40px auto 0;
+                p{
+                    @include w16r;
+                    text-align: center;
+                    line-height: 56px;
+                }
+            }
+        }
+    }
+}
+    @include desktop{
+        width: 100%;
+        .noticeSection{
+            width: 100%;
+            padding: 0 50px;
+            .noticeWrap{
+                .srcBox{
+                    width: 100%;
+                }
+            }
+            .qna{
+                width: 100%;
+                ul{
+                    li{
+                        .first{
+                            width: 150px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include tablet{
+        .noticeSection{
+            .noticeWrap{
+                table{
+                    tr{
+                        th.num{
+                            width: 90px;  
+                        }
+                        th.title{
+                            width: 50%;  
+                        }
+                        th.view{
+                            width: 90px;  
+                        }
+                    }
+                    tr{
+                        td.num{
+                            width: 90px;
+                            text-align: center;
+                        }
+                        td.title{
+                            width: 50%;  
+                        }
+                        td.view{
+                            width: 90px;
+                        }
+                    }
+                }
+            }
+            .qna{
+                width: 100%;
+                ul{
+                    li{
+                        .first{
+                            width: 150px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobileF{
+        .subNoticeHeader{
+            .noticeTxt{
+                h1{
+                    @include w40b;
+                    margin-bottom: 20px
+                }
+                p{
+                    @include w18b;
+                }
+            }
+        }
+        .noticeSection{
+            padding: 0px 30px;
+            .noticeBtn{
+                width: 100%;
+                .noticeBtnColor{
+                    width: calc(100% /3);
+                    height: 50px;
+                }
+                div{
+                    p{
+                        @include b14r
+                    }
+                }
+            }
+            .noticeWrap{
+                table{
+                    tr{
+                        @include b14r;
+                        th.num{
+                            display: none; 
+                        }
+                    }
+                    tr{
+                        td.num{
+                            display: none; 
+                        }
+                    }
+                }
+            }
+            .qna{
+                width: 100%;
+                ul{
+                    li{
+                        @include b16r;
+                        .first{
+                            width: 150px;
+                        }
+                    }
+                }
+                .cont{
+                    margin-top: 90px;
+                    h2{
+                        font-size: 32px;
+                    }
+                    .contTxt{
+                        @include b16r;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobileS{
+        .subNoticeHeader{
+            .noticeTxt{
+                h1{
+                    @include font32b;
+                    margin-bottom: 10px
+                }
+                p{
+                    @include w18b;
+                }
+            }
+        }
+        .noticeSection{
+            padding: 0px 20px;
+            .noticeWrap{
+                .srcBox{
+                    width: 100%;
+                    .inputBox{ 
+                        width: 100%;
+                        display: flex;
+                        position: absolute;
+                        flex-direction: column;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        div{
+                            position: relative;
+                            width: calc(100% - 40px);
+                            margin: 0 auto 5px;
+                        input{
+                            width: 100%;
+                            margin: 0 auto  ;
+                        }
+                        a{
+                            right: 10px;
+                            bottom: 12px;
+                        }
+                    }
+                    select{
+                        width: calc(100% - 40px);
+                        padding: 0 20px;
+                        margin: 0 auto  ;
+                    }
+                    }
+                    }
+            }
+            .qna{
+                width: 100%;
+                ul{
+                    li{
+                        @include b14r;
+                        .first{
+                            width: 100px;
+                        }
+                    }
+                }
+                .cont{
+                    margin-top: 90px;
+                    h2{
+                        font-size: 24px;
+                    }
+                    .contTxt{
+                        @include b14r;
+                    }
+                }
+            }
+        }
+    }
+}

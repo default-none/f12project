@@ -1,27 +1,92 @@
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import '../../../pages/HomePage.scss';
+import GuideImg1 from '../../../asset/img/guide_k.png';
+import GuideImg2 from '../../../asset/img/guide_c.png';
+import GuideImg3 from '../../../asset/img/guide_d.png';
 
 const GuideSection = () => {
+
+  useEffect(() => {
+    AOS.init({
+      // aos 초기화 설정
+      duration: 1000, // 애니메이션 지속 시간 (ms)
+      once: false, // 한 번만 애니메이션 실행 여부
+    });
+  }, []);
+
+  const textData = [
+    { 
+      id: 1,
+      text: '별빛야행',
+      h2:'별빛야행',
+      image: GuideImg1,
+
+  },
+    {
+      id: 2,
+      text: '달빛기행',
+      h2:'달빛기행',
+      image: GuideImg2,
+    },
+    { 
+      id: 3,
+      text: '밤의 석조전',
+      h2:'밤의 석조전',
+      image: GuideImg3,
+    },
+  ];
+
+  const [hoveredText, setHoveredText] = useState(null);
+  const [hoveredH2, setHoveredH2] = useState('별빛야행');
+  const [lastHoveredH2, setLastHoveredH2] = useState(null);
+  const [currentImage, setCurrentImage] = useState(GuideImg1);
+  const [lastImage, setLastImage] = useState(null);
+
+  const handleMouseEnter = (id, image, h2) => {
+    setHoveredText(id);
+    setCurrentImage(image);
+    setHoveredH2(h2);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredText(null);
+    setHoveredH2(hoveredH2);
+    setLastHoveredH2(lastHoveredH2);
+    setCurrentImage(currentImage);
+    setLastImage(lastImage);
+  };
+
   return <section className='guideSection'>
+        <div className='moon'></div>
         <div className='sectionScreen'>
         <div className='fontWrap'>
-          <div className='fontWrapL'>
-            <h2>별빛야행</h2>
+          <div className='fontWrapL' data-aos="fade-down">
+            <h2>{hoveredH2}</h2>
             <h3>500년 역사의 국보 체험 </h3>
-            <p>봄 깊은 밤,<br/>
-            경복궁 별빛야행에 여러분을 초대합니다. <br/>
-            쏟아지는 별빛아래에서 고종이 거닐었던 <br/>
-            향원정의 정취를 느껴보세요.</p>
+            <p>
+            서울의 대표적인 고궁 세 곳,<br/>
+            분위기 있는 조명 속에서 역사의 아름다움을 만나보세요. <br/>
+            궁중문화를 느낄 수 있는 특별한 밤, 궁궐에서의 시간을 즐겨보세요. <br/>
+            </p>
           </div>
           <div className='fontWrapR'>
-                <p>경복궁 <b>별빛야행</b></p>
-                <p>창덕궁 <b>달빛기행</b></p>
-                <p>덕수궁 <b>밤의 석조전</b></p>
+        {textData.map(({ id, text, image, h2 }) => (
+        <div
+        key={id}
+        className={`guideText ${hoveredText === id ? 'hovered' : ''}`}
+        onMouseEnter={() => handleMouseEnter(id, image, h2)}
+        onMouseLeave={handleMouseLeave}
+        >
+        <p>{text}</p>
+        </div>
+        ))}
           </div>
         </div>
       </div>
-      <div className='guideScreenWrap k'></div>
-      <div className='guideScreenWrap d'></div>
-      <div className='guideScreenWrap c'></div>
+      <img className='guideScreenWrap' src={currentImage}></img>
   </section>;
 };
 

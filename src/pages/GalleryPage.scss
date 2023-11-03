@@ -1,0 +1,617 @@
+@import '../style/mixin';
+
+.tabWrap {
+
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    .tabDivide {
+        padding: 0 20px;
+        @include b18r;
+    }
+
+    .tabMenu {
+        @include b18r;
+        font-weight: 300;
+        cursor: pointer;
+    }
+    .tabMenu.tabAcitve{
+        @include b24b;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #ffffff;
+    }
+  }
+  // 탭 scss 끝
+  .h459{
+    height: 459px;
+  }
+  .h928{
+    height: 928px;
+  }
+  .GalleryPageGbk{
+    width: 100%;
+    text-align: center;
+    h1{
+      @include b48b;
+      margin-top: 200px;
+    }
+    .ImgBox{
+      margin: 0 auto;
+      width: 1440px;
+      margin-top: 50px;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 2 1fr;
+      grid-template-rows: 6 1fr;
+      grid-template-areas:
+      'GbkImg1 GbkImg1'
+      'GbkImg1 GbkImg1'
+      'GbkImg2 GbkImg3'
+      'GbkImg4 GbkImg5'
+      'GbkImg4 GbkImg6'
+      'GbkImg7 GbkImg8'
+      ;
+      gap: 10px;
+      .GbkImg1{
+        grid-area: GbkImg1;
+        height: 815px;
+        background: url(../asset/img/byeol-1.png);
+      }
+      .GbkImg2{
+        grid-area: GbkImg2;
+        background: url(../asset/img/byeol-2.png);
+      }
+      .GbkImg3{
+        grid-area: GbkImg3;
+        background: url(../asset/img/byeol-20.png);
+      }
+      .GbkImg4{
+        grid-area: GbkImg4;
+        background: url(../asset/img/byeol-21.png);
+      }
+      .GbkImg5{
+        grid-area: GbkImg5;
+        background: url(../asset/img/byeol-22.png);
+      }
+      .GbkImg6{
+        grid-area: GbkImg6;
+        background: url(../asset/img/byeol-23.png);
+      }
+      .GbkImg7{
+        grid-area: GbkImg7; 
+        background: url(../asset/img/byeol-24.png);       
+      }
+      .GbkImg8{
+        grid-area: GbkImg8;
+        background: url(../asset/img/byeol-32.png);
+      }
+      .GbkGride{
+        background-size: cover;
+        background-position: center;
+      }
+    }
+    .ViewMore2 {
+      display: inline-block;
+      border: 2px solid #111;
+      border-radius: 30px;
+      padding: 5px 30px;
+      font-size: 16px;
+      color: #111;
+      cursor: pointer;
+      margin: 40px 0 ;
+    }
+    .cont2{
+      .ImgBox2{
+        margin: 0 auto;
+        width: 1440px;
+        margin-top: 50px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 2 1fr;
+        grid-template-rows: 6 1fr;
+        grid-template-areas:
+        'GbkImg9 GbkImg9'
+        'GbkImg9 GbkImg9'
+        'GbkImg10 GbkImg11'
+        'GbkImg12 GbkImg13'
+        'GbkImg12 GbkImg14'
+        'GbkImg15 GbkImg16'
+        ;
+        gap: 10px;
+        .GbkImg9{
+          grid-area: GbkImg9;
+          height: 815px;
+          background: url(../asset/img/byeol-26.png);
+        }
+        .GbkImg10{
+          grid-area: GbkImg10;
+          background: url(../asset/img/byeol-28.png);
+        }
+        .GbkImg11{
+          grid-area: GbkImg11;
+          background: url(../asset/img/byeol-29.png);
+        }
+        .GbkImg12{
+          grid-area: GbkImg12;
+          background: url(../asset/img/byeol-30.png);
+        }
+        .GbkImg13{
+          grid-area: GbkImg13;
+          background: url(../asset/img/byeol-31.png);
+        }
+        .GbkImg14{
+          grid-area: GbkImg14;
+        }
+        .GbkImg15{
+          grid-area: GbkImg15; 
+        }
+        .GbkImg16{
+          grid-area: GbkImg16;
+        }
+        .GbkGride{
+          background-size: cover;
+          background-position: center;
+          background-color: blueviolet;
+        }
+      }
+    }
+    @include desktop{
+      width: 100%;
+      padding: 0 50px;
+      .ImgBox{
+        width: 100%;
+      }
+      .cont2{
+        width: 100%;
+        .ImgBox2{
+          width: 100%;
+        }
+      }
+    }
+    @include mobileF{
+      width: 100%;
+      padding: 0 30px;
+      .ImgBox{
+        width: 100%;
+        grid-template-columns: 1 1fr;
+        grid-template-rows: 8 1fr;
+        grid-template-areas:
+        'GbkImg1'
+        'GbkImg2'
+        'GbkImg3'
+        'GbkImg4'
+        'GbkImg5'
+        'GbkImg6'
+        'GbkImg7'
+        'GbkImg8'
+        ;
+        gap: 30px;
+        .GbkImg1{
+          height: 459px;
+        }
+        .GbkImg4{
+          height: 459px;
+        }
+      }
+      .cont2{
+        width: 100%;
+        .ImgBox2{
+          width: 100%;
+          grid-template-columns: 1 1fr;
+          grid-template-areas:
+          'GbkImg9'
+          'GbkImg10'
+          'GbkImg11'
+          'GbkImg12'
+          'GbkImg13'
+          'GbkImg14'
+          'GbkImg15'
+          'GbkImg16'
+          ;
+          gap: 30px;
+          
+          .GbkImg9{
+            height: 459px;
+          }
+          .GbkImg12{
+            height: 459px;
+          }
+        }
+      }
+    }
+  }
+  .GalleryPageCdk{
+    width: 100%;
+    text-align: center;
+    h1{
+      @include b48b;
+      margin-top: 200px;
+    }
+    .ImgBox3{
+      margin: 0 auto;
+      width: 1440px;
+      margin-top: 50px;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 2 1fr;
+      grid-template-rows: 6 1fr;
+      grid-template-areas:
+      'CdkImg1 CdkImg1'
+      'CdkImg1 CdkImg1'
+      'CdkImg2 CdkImg3'
+      'CdkImg4 CdkImg5'
+      'CdkImg4 CdkImg6'
+      'CdkImg7 CdkImg8'
+      ;
+      gap: 10px;
+      .CdkImg1{
+        grid-area: CdkImg1;
+        height: 815px;
+        background: url(../asset/img/dal-19.png)
+      }
+      .CdkImg2{
+        grid-area: CdkImg2;
+        background: url(../asset/img/dal-20.png)
+      }
+      .CdkImg3{
+        grid-area: CdkImg3;
+        background: url(../asset/img/dal-21.png)
+      }
+      .CdkImg4{
+        grid-area: CdkImg4;
+        background: url(../asset/img/dal-18.png)
+      }
+      .CdkImg5{
+        grid-area: CdkImg5;
+        background: url(../asset/img/dal-15.png)
+      }
+      .CdkImg6{
+        grid-area: CdkImg6;
+        background: url(../asset/img/dal-13.png)
+      }
+      .CdkImg7{
+        grid-area: CdkImg7;
+        background: url(../asset/img/dal-12.png)    
+      }
+      .CdkImg8{
+        grid-area: CdkImg8;
+        background: url(../asset/img/dal-9.png)
+      }
+      .GbkGride{
+        background-size: cover;
+        background-position: center;
+        background-color: blue;
+      }
+
+    }
+    .ViewMore2 {
+      display: inline-block;
+      border: 2px solid #111;
+      border-radius: 30px;
+      padding: 5px 30px;
+      font-size: 16px;
+      color: #111;
+      cursor: pointer;
+      margin: 40px 0 ;
+    }
+    .cont3{
+      .ImgBox4{
+        margin: 0 auto;
+        width: 1440px;
+        margin-top: 50px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 2 1fr;
+        grid-template-rows: 6 1fr;
+        grid-template-areas:
+        'CdkImg9 CdkImg9'
+        'CdkImg9 CdkImg9'
+        'CdkImg10 CdkImg11'
+        'CdkImg12 CdkImg13'
+        'CdkImg12 CdkImg14'
+        'CdkImg15 CdkImg16'
+        ;
+        gap: 10px;
+        .CdkImg9{
+          grid-area: CdkImg9;
+          height: 815px;
+          background: url(../asset/img/dal-14.png)
+        }
+        .CdkImg10{
+          grid-area: CdkImg10;
+          background: url(../asset/img/dal-11.png)
+        }
+        .CdkImg11{
+          grid-area: CdkImg11;
+          background: url(../asset/img/dal-10.png)
+        }
+        .CdkImg12{
+          grid-area: CdkImg12;
+          background: url(../asset/img/dal-6.png)
+        }
+        .CdkImg13{
+          grid-area: CdkImg13;
+          background: url(../asset/img/dal-5.png)
+        }
+        .CdkImg14{
+          grid-area: CdkImg14;
+          background: url(../asset/img/dal-3.png)
+        }
+        .CdkImg15{
+          grid-area: CdkImg15;
+          background: url(../asset/img/dal-2.png)  
+        }
+        .CdkImg16{
+          grid-area: CdkImg16;
+          background: url(../asset/img/dal-4.png)
+        }
+        .GbkGride{
+          background-size: cover;
+          background-position: center;
+          background-color: blueviolet;
+        }
+      }
+    }
+    @include desktop{
+      width: 100%;
+      padding: 0 50px;
+      .ImgBox3{
+        width: 100%;
+      }
+      .cont3{
+        width: 100%;
+        .ImgBox4{
+          width: 100%;
+        }
+      }
+    }
+    @include mobileF{
+      width: 100%;
+      padding: 0 30px;
+      .ImgBox3{
+        width: 100%;
+        grid-template-columns: 1 1fr;
+        grid-template-rows: 8 1fr;
+        grid-template-areas:
+        'CdkImg1'
+        'CdkImg2'
+        'CdkImg3'
+        'CdkImg4'
+        'CdkImg5'
+        'CdkImg6'
+        'CdkImg7'
+        'CdkImg8'
+        ;
+        gap: 30px;
+        .CdkImg1{
+          height: 459px;
+        }
+        .CdkImg4{
+          height: 459px;
+        }
+      }
+      .cont3{
+        width: 100%;
+        .ImgBox4{
+          width: 100%;
+          grid-template-columns: 1 1fr;
+          grid-template-areas:
+          'CdkImg9'
+          'CdkImg10'
+          'CdkImg11'
+          'CdkImg12'
+          'CdkImg13'
+          'CdkImg14'
+          'CdkImg15'
+          'CdkImg16'
+          ;
+          gap: 30px;
+          
+          .CdkImg9{
+            height: 459px;
+          }
+          .CdkImg12{
+            height: 459px;
+          }
+        }
+      }
+    }
+  }
+  .GalleryPageDsk{
+    width: 100%;
+    text-align: center;
+    h1{
+      @include b48b;
+      margin-top: 200px;
+    }
+    .ImgBox5{
+      margin: 0 auto;
+      width: 1440px;
+      margin-top: 50px;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 2 1fr;
+      grid-template-rows: 6 1fr;
+      grid-template-areas:
+      'DskImg1 DskImg1'
+      'DskImg1 DskImg1'
+      'DskImg2 DskImg3'
+      'DskImg4 DskImg5'
+      'DskImg4 DskImg6'
+      'DskImg7 DskImg8'
+      ;
+      gap: 10px;
+      .DskImg1{
+        grid-area: DskImg1;
+        height: 815px;
+        background: url(../asset/img/seokjojeon-36.png);
+      }
+      .DskImg2{
+        grid-area: DskImg2;
+        background: url(../asset/img/seokjojeon-42.png);
+      }
+      .DskImg3{
+        grid-area: DskImg3;
+        background: url(../asset/img/seokjojeon-44.png);
+      }
+      .DskImg4{
+        grid-area: DskImg4;
+        background: url(../asset/img/seokjojeon-45.png);
+      }
+      .DskImg5{
+        grid-area: DskImg5;
+        background: url(../asset/img/seokjojeon-46.png);
+      }
+      .DskImg6{
+        grid-area: DskImg6;
+        background: url(../asset/img/seokjojeon-47.png);
+      }
+      .DskImg7{
+        grid-area: DskImg7;
+        background: url(../asset/img/seokjojeon-48.png);    
+      }
+      .DskImg8{
+        grid-area: DskImg8;
+        background: url(../asset/img/seokjojeon-37.png);
+      }
+      .GbkGride{
+        background-color: yellow;
+        background-size: cover;
+        background-position: center;;
+      }
+    }
+    .ViewMore2 {
+      display: inline-block;
+      border: 2px solid #111;
+      border-radius: 30px;
+      padding: 5px 30px;
+      font-size: 16px;
+      color: #111;
+      cursor: pointer;
+      margin: 40px 0 ;
+    }
+    .cont4{
+      .ImgBox6{
+        margin: 0 auto;
+        width: 1440px;
+        margin-top: 50px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 2 1fr;
+        grid-template-rows: 6 1fr;
+        grid-template-areas:
+        'DskImg9 DskImg9'
+        'DskImg9 DskImg9'
+        'DskImg10 DskImg11'
+        'DskImg12 DskImg13'
+        'DskImg12 DskImg14'
+        'DskImg15 DskImg16'
+        ;
+        gap: 10px;
+        .DskImg9{
+          grid-area: DskImg9;
+          height: 815px;
+          background: url(../asset/img/seokjojeon-39.png);
+        }
+        .DskImg10{
+          grid-area: DskImg10;
+          background: url(../asset/img/seokjojeon-43.png);
+        }
+        .DskImg11{
+          grid-area: DskImg11;
+          background: url(../asset/img/seokjojeon-49.png);
+        }
+        .DskImg12{
+          grid-area: DskImg12;
+          background: url(../asset/img/seokjojeon-50.png);
+        }
+        .DskImg13{
+          grid-area: DskImg13;
+          background: url(../asset/img/seokjojeon-51.png);
+        }
+        .DskImg14{
+          grid-area: DskImg14;
+          background: url(../asset/img/seokjojeon-52.png);
+        }
+        .DskImg15{
+          grid-area: DskImg15; 
+          background: url(../asset/img/seokjojeon-53.png); 
+        }
+        .DskImg16{
+          grid-area: DskImg16;
+          background: url(../asset/img/seokjojeon-55.png);
+        }
+        .GbkGride{
+          background-size: cover;
+          background-position: center;
+          background-color: blueviolet;
+        }
+      }
+    }
+    @include desktop{
+      width: 100%;
+      padding: 0 50px;
+      .ImgBox5{
+        width: 100%;
+      }
+      .cont4{
+        width: 100%;
+        .ImgBox6{
+          width: 100%;
+        }
+      }
+    }
+    @include mobileF{
+      width: 100%;
+      padding: 0 30px;
+      .ImgBox5{
+        width: 100%;
+        grid-template-columns: 1 1fr;
+        grid-template-rows: 8 1fr;
+        grid-template-areas:
+        'DskImg1'
+        'DskImg2'
+        'DskImg3'
+        'DskImg4'
+        'DskImg5'
+        'DskImg6'
+        'DskImg7'
+        'DskImg8'
+        ;
+        gap: 30px;
+        .DskImg1{
+          height: 459px;
+        }
+        .DskImg4{
+          height: 459px;
+        }
+      }
+      .cont4{
+        width: 100%;
+        .ImgBox6{
+          width: 100%;
+          grid-template-columns: 1 1fr;
+          grid-template-areas:
+          'DskImg9'
+          'DskImg10'
+          'DskImg11'
+          'DskImg12'
+          'DskImg13'
+          'DskImg14'
+          'DskImg15'
+          'DskImg16'
+          ;
+          gap: 30px;
+          
+          .DskImg9{
+            height: 459px;
+          }
+          .DskImg12{
+            height: 459px;
+          }
+        }
+      }
+    }
+
+  }
