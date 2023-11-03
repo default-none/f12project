@@ -1,7 +1,5 @@
 const GuidePage = () => {
-    return ( 
-        <main className="GuidePage"></main>
-     );
+  return <main className="GuidePage"></main>;
 };
- 
+
 export default GuidePage;

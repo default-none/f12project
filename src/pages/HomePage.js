@@ -1,10 +1,10 @@
-import BookingSection from '../components/layers/home/BookingSection';
-import EventSection from '../components/layers/home/EventSection';
-import GallerySection from '../components/layers/home/GallerySection';
-import GuideSection from '../components/layers/home/GuideSection';
-import IntroSection from '../components/layers/home/IntroSection';
-import NoticeSection from '../components/layers/home/NoticeSection';
-import ProgramSection from '../components/layers/home/ProgramSection';
+import BookingSection from '../components/layouts/home/BookingSection';
+import EventSection from '../components/layouts/home/EventSection';
+import GallerySection from '../components/layouts/home/GallerySection';
+import GuideSection from '../components/layouts/home/GuideSection';
+import IntroSection from '../components/layouts/home/IntroSection';
+import NoticeSection from '../components/layouts/home/NoticeSection';
+import ProgramSection from '../components/layouts/home/ProgramSection';
 
 const HomePage = () => {
   return (
