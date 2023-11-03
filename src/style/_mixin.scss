@@ -50,13 +50,13 @@ $colors: (
 }
 
 @mixin w40b {
-  font-size: 48px;
+  font-size: 40px;
   color: map-get($map: $colors, $key: wFont01);
   font-weight: 700;
 }
 
 @mixin b40b {
-  font-size: 48px;
+  font-size: 40px;
   color: map-get($map: $colors, $key: bFont01);
   font-weight: 700;
 }
@@ -89,6 +89,12 @@ $colors: (
   font-weight: 700;
 }
 
+@mixin b24r {
+  font-size: 24px;
+  color: map-get($map: $colors, $key: bFont01);
+  font-weight: 400;
+}
+
 @mixin w24r {
   font-size: 24px;
   color: map-get($map: $colors, $key: wFont01);
@@ -104,6 +110,12 @@ $colors: (
 @mixin w18b {
   font-size: 18px;
   color: map-get($map: $colors, $key: wFont01);
+  font-weight: 700;
+}
+
+@mixin b18b {
+  font-size: 18px;
+  color: map-get($map: $colors, $key: bont01);
   font-weight: 700;
 }
 
@@ -127,6 +139,18 @@ $colors: (
 
 @mixin b18l {
   font-size: 18px;
+  color: map-get($map: $colors, $key: bFont01);
+  font-weight: 300;
+}
+
+@mixin b16r {
+  font-size: 16px;
+  color: map-get($map: $colors, $key: bFont01);
+  font-weight: 400;
+}
+
+@mixin b16l {
+  font-size: 16px;
   color: map-get($map: $colors, $key: bFont01);
   font-weight: 300;
 }
@@ -167,13 +191,17 @@ $colors: (
   font-weight: 700;
 }
 
+@mixin m14b {
+  font-size: 14px;
+  color: map-get($map: $colors, $key: mFont01);
+  font-weight: 700;
+}
+
 @mixin b14r {
   font-size: 14px;
   color: map-get($map: $colors, $key: bFont01);
   font-weight: 400;
 }
-
-
 
 //ST : ScreenType;
 @mixin screenProtector {
@@ -194,25 +222,6 @@ $colors: (
   align-items: center;
 }
 
-
-//ST : ScreenType;
-@mixin screenProtector {
-  width: 100%;
-  height: 100%;
-  background-color: map-get($map: colors, $key: blackType2);
-}
-
-@mixin ScreenType1 {
-  width: 1440px;
-  margin: 0 auto;
-  display: flex;
-}
-
-@mixin ScreenType2 {
-  width: 100%;
-  display: flex;
-}
-
 //반응형
 @mixin mobileS {
   @media (max-width: 460px) {
@@ -221,19 +230,19 @@ $colors: (
 }
 
 @mixin mobileF {
-  @media (min-width: 461px) and (max-width: 768px) {
+  @media (max-width: 768px) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: 769px) and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: 1025px) and (max-width: 1440px) {
+  @media  (max-width: 1440px) {
     @content;
   }
 }

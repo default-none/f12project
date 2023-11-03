@@ -7,6 +7,7 @@ import IntroSection from '../components/layers/home/IntroSection';
 import NoticeSection from '../components/layers/home/NoticeSection';
 import ProgramSection from '../components/layers/home/ProgramSection';
 
+
 const HomePage = () => {
   return (
     <main className="HomePage">
@@ -18,6 +19,7 @@ const HomePage = () => {
       <NoticeSection></NoticeSection>
       <EventSection></EventSection>
     </main>
+    
   );
 };
 

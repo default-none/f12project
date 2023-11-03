@@ -1,9 +1,9 @@
 @import '../../style/mixin';
 
 .footer{
-    height: 480px;
+    height: 400px;
     @include screenType2;
-    background-color: #1a124a;
+    background-color: #100516;
     .footerWrap{
         align-items: flex-end;
         @include screenType1 ;
@@ -82,18 +82,142 @@
             }
             .footerR{
                 text-align: end;
+                margin-top: 30px;
+                .iconWrap{
+                    justify-content: flex-start;
+                    .icon{
+                        margin: 0 20px 0 0;
+                    }
+                }
                 div{
                     display: flex;
-                    justify-content: flex-end;          
+                    justify-content: flex-start;          
                     p{
-                        @include w16r;
-                        margin: 0 0 10px 10px;
+                        @include w14r;
+                        margin: 0 10px 10px 0;
                     }
                 }
                 p{
                     @include w14r;
                 }
             }
+    }
+
+    @include mobileS{
+        padding: 0 20px
+    }
+}
+};
+
+.footerSecond{
+    height: 400px;
+    @include screenType2;
+    background-color: #DDDDDD;
+    .footerWrap{
+        align-items: flex-end;
+        @include screenType1 ;
+        justify-content: space-between;
+        .footerL{
+            .logo{
+                background: url(../../asset/img/icon.png);
+                background-position: -140px -131px;
+                width: 133px;
+                height: 51px;
+                margin: 0 0 20px 0;
+                opacity: 0.6;
+            }
+            p{
+                @include b18r ;
+                margin: 0 0 10px 0;
+                opacity: 0.7;
+            }
+        }
+        .footerR{
+            text-align: end;
+            .iconWrap{
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 20px;
+                .icon{
+                    width: 31px;
+                    height: 31px;
+                    margin-left: 20px;
+                    opacity: 0.7;
+                }
+                .face{
+                    background: url(../../asset/img/icon.png);
+                    background-position: -184px -235px;
+                }
+                .insta{
+                    background: url(../../asset/img/icon.png);
+                    background-position: -39px -235px;
+                }
+                .blog{
+                    background: url(../../asset/img/icon.png);
+                    background-position: -112px -235px;
+                }
+            }
+            div{
+                display: flex;
+                justify-content: flex-end;          
+                p{
+                    @include b14r;
+                    margin: 0 0 10px 10px;
+                    opacity: 0.7;
+                }
+            }
+            p{
+                @include b14r;
+                opacity: 0.7;
+            }
+        }
+    };
+
+    @include desktop{
+        width: 100%;
+        padding: 0 50px;
+    };
+
+    @include tablet{
+        padding: 0 50px;
+    };
+
+    @include mobileF{
+        padding: 0 30px;
+        .footerWrap{
+            flex-direction: column;
+            align-items: flex-start;
+            .footerL{
+                p{
+                    @include b16r ;
+                    margin: 0 0 10px 0;
+                }
+            }
+            .footerR{
+                text-align: end;
+                margin-top: 30px;
+                .iconWrap{
+                    justify-content: flex-start;
+                    .icon{
+                        margin: 0 20px 0 0;
+                    }
+                }
+                div{
+                    display: flex;
+                    justify-content: flex-start;          
+                    p{
+                        @include b14r;
+                        margin: 0 10px 10px 0;
+                    }
+                }
+                p{
+                    @include b14r;
+                }
+            }
+    }
+
+    @include mobileS{
+        padding: 0 20px
     }
 }
 };

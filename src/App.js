@@ -6,7 +6,7 @@ import ProgramPage from './pages/ProgramPage';
 import GalleryPage from './pages/GalleryPage';
 import NoticePage from './pages/NoticePage';
 import UsersPage from './pages/UsersPage';
-import Footer from './components/layers/Footer.js';
+import Footer from './components/layers/Footer';
 
 function App() {
 	return <div className="App">
@@ -16,9 +16,9 @@ function App() {
 		<Route path='/program' element={<ProgramPage></ProgramPage>}></Route>
 		<Route path='/gallery' element={<GalleryPage></GalleryPage>}></Route>
 		<Route path='/notice' element={<NoticePage></NoticePage>}></Route>
-		<Route path='/users' element={<UsersPage/>}></Route>
+		<Route path='/users' element={<UsersPage/>}></Route>		
 	</Routes>
-	<Footer></Footer>
+	<Footer/>
 	</div>;
 }
 

@@ -1,0 +1,44 @@
+@import '../../style/mixin';
+.SubComponent{
+    position: relative;
+    width:100%;
+    height:400px;
+    background-color: #000000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: url(../../asset/img/subtop2.png) center;
+    background-size: cover;
+    .ComponentTxt{
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        h1{
+            @include w48b;
+            margin-bottom: 30px
+        }
+        p{
+            @include w18b;
+        }
+    }
+
+    @include mobileF{
+        .ComponentTxt{
+            h1{
+                @include w40b;
+            }
+        }
+    }
+    @include mobileS{
+        .ComponentTxt{
+            h1{
+                font-size: 32px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+
+    }
+}
