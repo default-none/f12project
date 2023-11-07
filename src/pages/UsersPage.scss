@@ -1,53 +1,86 @@
 @import '../style/mixin';
-*{margin: 0;
-padding: 0;
-box-sizing: border-box}
-.SignUpPage{
+
+
+.UsersPage{
     @include screenProtector;
     height: 100vh;
+    background: linear-gradient(to bottom, #1a124a 50%, #433577);
     position: relative;
-      .UsersSignWrap{
+      .UsersWrap{
         width: 460px;
+        // border: 1px solid white;
+        padding: 0 20px;
         margin: 0 auto;
-        padding: 150px 20px 0 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        div{
         .logo{
-          width: 132px;
+          width: 133px;
           height: 52px;
-          background: url(../asset/img/icon.png);
-          background-position: -140px -131px;
-          margin: 0 auto;
-          margin-bottom: 60px;
-        }
-        .SignInput{
-          margin-bottom: 20px;
+          background-image: url(../asset/img/icon.png);
+          background-position: 0px -131px;
+          margin: 0 auto 60px;
         }
         input{
-          padding: 20px;
+          width: 100%;
+          height: 56px;
           margin-bottom: 10px;
-          width: 100%;
-          height: 56px;
+          padding: 0 20px;
         }
-        button{
-          margin-top: 30px;
+        .loginBtn{
           width: 100%;
           height: 56px;
-          background-color: #ddd;
-          border: none;
-          font-size: 17px;
-          font-weight: bold;
+          text-align: center;
+          margin-top: 20px;
+          border: 1px solid white;
           cursor: pointer;
+          p{
+            line-height: 56px;
+            @include w16b;
+          }
+        }
+        .kakaoBtn{
+          width: 100%;
+          height: 56px;
+          text-align: center;
+          margin-top: 10px;
+          background-color: #FAE300;
+          cursor: pointer;
+          p{
+            line-height: 56px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #111;
+          }
+        }
+        .join{
+          display: flex;
+          margin: 20px 0 0 0;
+          p{
+            margin: 0 10px 0 0;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+          }
+        }
+        .address{
+          text-align: center;
+          margin-top: 60px;
+          @include w14r;
         }
       }
-      .BkImg{
-        width: 100%;
-        height:113px;
-        // background: url(../asset/img/footerWeb.png);
-        background: url(../asset/img/footerBg.png);
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-        left:  0;
-        bottom: 0;
-        z-index: 99;
-      }
+    }
+    .FooterImg{
+      background-image: url(../asset/img/footerBg.png);
+      width: 100%;
+      height: 118px;
+      background-size: cover;
+      position: absolute;
+      left: 0; bottom: 0;
+      z-index: 55;
+      background-size: cover;
+      background-position: center;
+    }
   }

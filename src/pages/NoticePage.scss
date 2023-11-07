@@ -38,6 +38,27 @@
         border-radius: 1000px;
         display: flex;
         position: relative;
+        // 정사각형 tab 마다 움직이기
+        .tab {
+            cursor: pointer;
+            position: relative;
+            z-index: 9999;
+            color: #111;
+          }
+        .tab.active{
+            color: #fff;
+        }
+        .square {
+            width: calc(480px /3);
+            border-radius: 1000px;
+            height: 50px;
+            background-color: #33BBC5; /* 정사각형의 배경색 */
+            transition: all 0.3s ease; /* 움직임에 대한 트랜지션 설정 */
+            position: absolute; /* 절대 위치로 설정 */
+            bottom: -60px; /* 정사각형의 초기 위치를 탭 아래로 조정 */
+            z-index: 999;
+          } 
+        // 정사각형 tab 마다 움직이기
         .noticeBtnColor{
             width: calc(480px /3);
             height: 50px;
@@ -209,6 +230,17 @@
                     margin-left: 5px;
                 }
             }
+            .submitBtn{
+                width: 320px;
+                height: 56px;
+                background-color: #33BBC5;
+                margin: 40px auto 0;
+                p{
+                    @include w16r;
+                    text-align: center;
+                    line-height: 56px;
+                }
+            }
         }
     }
 }
@@ -354,8 +386,13 @@
             }
         }
         .noticeSection{
-            padding: 0px 20px;
+            padding: 0px 10px;
             .noticeWrap{
+                    table{
+                        tr{
+                                font-size: 13px; 
+                        }
+                    }
                 .srcBox{
                     width: 100%;
                     .inputBox{ 

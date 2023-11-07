@@ -73,7 +73,6 @@ const GallerySection = () => {
   const slidesToShow = 3; // 한 번에 보여줄 슬라이드의 개수
   const totalSlides = images.length;
 
-  // const totalSlidesToShow = totalSlides - slidesToShow;
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
     setBackCurrentSlide((prevSlide2) => (prevSlide2 + 1) % images2.length);
