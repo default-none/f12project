@@ -28,7 +28,6 @@ const ProgramSection = () => {
               pagination={{
                   dynamicBullets: true,
                 }}
-              modules={[Pagination]}
               slidesPerView={1}
               spaceBetween={20}
               breakpoints={{               
