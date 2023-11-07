@@ -15,6 +15,7 @@ function App() {
 		<Route path='/guide' element={<GuidePage></GuidePage>}></Route>
 		<Route path='/program' element={<ProgramPage></ProgramPage>}></Route>
 		<Route path='/gallery' element={<GalleryPage></GalleryPage>}></Route>
+		<Route path='/gallery/:tab' element={<GalleryPage></GalleryPage>}></Route>
 		<Route path='/notice' element={<NoticePage></NoticePage>}></Route>
 		<Route path='/users' element={<UsersPage/>}></Route>		
 	</Routes>

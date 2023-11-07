@@ -458,7 +458,9 @@ table{
             @include screenType1;
             // float:  right;
             display: flex;
-
+            a{
+                color:black;
+            }
             // 스와이퍼 끝
             .slideBox {
                 width: 100%;

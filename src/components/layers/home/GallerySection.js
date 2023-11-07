@@ -1,34 +1,65 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../../../pages/HomePage.scss';
-import Byeol2 from '../../../asset/img/byeol-2.png';
-import Byeo24 from '../../../asset/img/byeol-24.png';
-import Byeo31 from '../../../asset/img/byeol-31.png';
-import Byeo32 from '../../../asset/img/byeol-32.png';
+import byeol from '../../../asset/img/byeol-1.png';
+import GBK from '../../../asset/img/GBK.png';
+import GBK1 from '../../../asset/img/GBK-1.png';
+import GBK2 from '../../../asset/img/GBK-2.png';
+import GBK3 from '../../../asset/img/GBK-3.png';
+import GBK4 from '../../../asset/img/GBK-4.png';
+import GBK5 from '../../../asset/img/GBK-5.png';
+import CDK1 from '../../../asset/img/CDK-1.png';
+import CDK2 from '../../../asset/img/CDK-2.png';
+import CDK3 from '../../../asset/img/CDK-3.png';
+import CDK4 from '../../../asset/img/CDK-4.png';
+import CDK5 from '../../../asset/img/CDK-5.png';
+import DSK1 from '../../../asset/img/DSK-1.png';
+import DSK2 from '../../../asset/img/DSK-2.png';
+import DSK3 from '../../../asset/img/DSK-3.png';
+import DSK4 from '../../../asset/img/DSK-4.png';
+import DSK5 from '../../../asset/img/DSK-5.png';
+
 
 
 const images = [
-  Byeol2,
-  Byeo24,
-  Byeo31,
-  Byeo32,
+  GBK,
+  byeol,
+  GBK2,
+  GBK1,
+  GBK3,
+  GBK4,
+  GBK5,
+  CDK1,
+  CDK2,
+  CDK3,
+  CDK4,
+  CDK5,
+  DSK1,
+  DSK2,
+  DSK3,
+  DSK4,
+  DSK5
 
-  Byeol2,
-  Byeo24,
-  Byeo31,
-  Byeo32,
   
-  // 추가 이미지들을 여기에 추가할 수 있습니다
 ];
 const images2 = [
-  Byeol2,
-  Byeo24,
-  Byeo31,
-  Byeo32,
-
-  Byeol2,
-  Byeo24,
-  Byeo31,
-  Byeo32,
+  GBK,
+  byeol,
+  GBK2,
+  GBK1,
+  GBK3,
+  GBK4,
+  GBK5,
+  CDK1,
+  CDK2,
+  CDK3,
+  CDK4,
+  CDK5,
+  DSK1,
+  DSK2,
+  DSK3,
+  DSK4,
+  DSK5
 ];
 
 
@@ -59,7 +90,9 @@ const GallerySection = () => {
     <div className='GalleryTitleBox'>
       <p className='GalleryMent'>조명속에 수놓아진 역사의 아름다움</p>
       <p className='GalleryTitle'>갤러리</p>
-      <p className='ViewBtn'>VIEW MORE</p>
+      <Link to="/gallery" target="_blank">
+        <p className='ViewBtn'>VIEW MORE</p>
+      </Link>
     </div>
     <div className='slider-container2'>
       <div className='GallerySlideBox2'>

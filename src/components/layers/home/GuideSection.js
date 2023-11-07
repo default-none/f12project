@@ -73,24 +73,25 @@ const GuideSection = () => {
             </p>
           </div>
           <div className='fontWrapR'>
-          {textData.map(({ id, text, image, h2}) => (
-        <p
-          key={id}
-          style={{
-            fontSize: hoveredText === id ? '40px' : '28px',
-            transition: 'font-size 0.3s ease-in-out',
-            cursor: 'pointer',
-            color: hoveredText === id ? '#33bbc5' : '#ffffff',
-            borderBottom: hoveredText === id ? '1px solid #33bbc5' : 'none',
-            fontWeight: hoveredText === id ? '700' : '400',
-          }}
-          // eslint-disable-next-line no-undef
-          onMouseEnter={() => handleMouseEnter(id, image, h2)}
-          onMouseLeave={handleMouseLeave}
-        >
-          {text}
-        </p>
-      ))}
+            {textData.map(({ id, text, image, h2}) => (
+              <p
+                key={id}
+                style={{
+                  fontSize: hoveredText === id ? '40px' : '28px',
+                  transition: 'font-size 0.3s ease-in-out',
+                  cursor: 'pointer',
+                  color: hoveredText === id ? '#33bbc5' : '#ffffff',
+                  borderBottom: hoveredText === id ? '1px solid #33bbc5' : 'none',
+                  fontWeight: hoveredText === id ? '700' : '400',
+                }}
+                // eslint-disable-next-line no-undef
+                onMouseEnter={() => handleMouseEnter(id, image, h2)}
+                onMouseLeave={handleMouseLeave}
+              >
+              {text}
+                      </p>
+            
+                  ))}
           </div>
         </div>
       </div>
