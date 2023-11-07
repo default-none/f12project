@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -23,6 +24,7 @@ const GuideSection = () => {
       text: '별빛야행',
       h2:'별빛야행',
       image: GuideImg1,
+      link:'/guide/star',
 
   },
     {
@@ -30,16 +32,18 @@ const GuideSection = () => {
       text: '달빛기행',
       h2:'달빛기행',
       image: GuideImg2,
+      link:'/guide/moon',
     },
     { 
       id: 3,
       text: '밤의 석조전',
       h2:'밤의 석조전',
       image: GuideImg3,
+      link:'/guide/night',
     },
   ];
 
-  const [hoveredText, setHoveredText] = useState(null);
+  const [hoveredText, setHoveredText] = useState(1);
   const [hoveredH2, setHoveredH2] = useState('별빛야행');
   const [lastHoveredH2, setLastHoveredH2] = useState(null);
   const [currentImage, setCurrentImage] = useState(GuideImg1);
@@ -52,10 +56,10 @@ const GuideSection = () => {
   };
 
   const handleMouseLeave = () => {
-    setHoveredText(null);
+    // setHoveredText(null);
     setHoveredH2(hoveredH2);
     setLastHoveredH2(lastHoveredH2);
-    setCurrentImage(currentImage);
+    // setCurrentImage(currentImage);
     setLastImage(lastImage);
   };
 
@@ -73,15 +77,18 @@ const GuideSection = () => {
             </p>
           </div>
           <div className='fontWrapR'>
-        {textData.map(({ id, text, image, h2 }) => (
+        {textData.map(({ id, text, image, h2, link }) => (
+            <Link to={link} key={id}>
         <div
         key={id}
         className={`guideText ${hoveredText === id ? 'hovered' : ''}`}
         onMouseEnter={() => handleMouseEnter(id, image, h2)}
         onMouseLeave={handleMouseLeave}
         >
-        <p>{text}</p>
+        <p className={hoveredText === id ? 'big' : ''}>{text}</p>
+        <div className={hoveredText === id ? 'lineHover line' : 'line'}></div>
         </div>
+        </Link>
         ))}
           </div>
         </div>
