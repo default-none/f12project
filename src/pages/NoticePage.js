@@ -25,7 +25,6 @@ const NoticePage = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {/* 여기에 공지사항 목록을 동적으로 렌더링하는 코드를 추가할 수 있습니다. */}
                   <tr className="tableBorder">
                     <td className="num"><b>번호</b></td>
                     <td className="title"><b>제목</b></td>

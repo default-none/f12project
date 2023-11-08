@@ -6,6 +6,10 @@
     height: 100vh;
     background: linear-gradient(to bottom, #1a124a 50%, #433577);
     position: relative;
+    .bgImg{
+      width: 100%;
+      height: 100vh;
+      background: url(../asset/img/all_bg.png);
       .UsersWrap{
         width: 460px;
         // border: 1px solid white;
@@ -41,20 +45,20 @@
             @include w16b;
           }
         }
-        .kakaoBtn{
-          width: 100%;
-          height: 56px;
-          text-align: center;
-          margin-top: 10px;
-          background-color: #FAE300;
-          cursor: pointer;
-          p{
-            line-height: 56px;
-            font-size: 16px;
-            font-weight: bold;
-            color: #111;
-          }
-        }
+        // .kakaoBtn{
+        //   width: 100%;
+        //   height: 56px;
+        //   text-align: center;
+        //   margin-top: 10px;
+        //   background-color: #FAE300;
+        //   cursor: pointer;
+        //   p{
+        //     line-height: 56px;
+        //     font-size: 16px;
+        //     font-weight: bold;
+        //     color: #111;
+        //   }
+        // }
         .join{
           display: flex;
           margin: 20px 0 0 0;
@@ -84,3 +88,19 @@
       background-position: center;
     }
   }
+}
+
+.kaLogin{
+    width: 100%;
+    height: 56px;
+    text-align: center;
+    margin-top: 10px;
+    background-color: #FAE300;
+    cursor: pointer;
+    p{
+      line-height: 56px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #111;
+    }
+}

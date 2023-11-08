@@ -27,7 +27,6 @@ const ProgramSection = () => {
               pagination={{
                   dynamicBullets: true,
                 }}
-              modules={[Pagination]}
               slidesPerView={1}
               spaceBetween={20}
               breakpoints={{               
@@ -41,7 +40,7 @@ const ProgramSection = () => {
               // eslint-disable-next-line react/jsx-no-duplicate-props
               modules={[Autoplay, Navigation, Pagination]}
               autoplay={{
-                delay: 2500,
+                delay: 2000,
                 disableOnInteraction: false,
               }}
               className="mySwiper"
