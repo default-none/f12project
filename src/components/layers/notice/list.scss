@@ -1,0 +1,71 @@
+@import '../../../style/mixin';
+
+.ListComponent {
+  width: 100%;
+  border-spacing: 0;
+  thead {
+    text-align: center;
+    background-color: #111111;
+    color: white;
+    th {
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    th.num {
+      width: 100px;
+    }
+    th.title {
+      width: 60%;
+    }
+    th.view {
+      width: 100px;
+    }
+  }
+  .informList {
+    color: #111;
+    transition: 1s;
+    display: table-row;
+    &:hover {
+      background-color: map-get($map: $colors, $key: mFont01);
+    }
+    td {
+      padding: 25px;
+      border-bottom: 1px solid #acacac;
+      transition: 1s;
+    }
+    &:hover > td {
+      color: map-get($map: $colors, $key: wFont01);
+    }
+    td.informNumbering {
+      text-align: center;
+    }
+    td.informTitle {
+      text-align: left;
+    }
+    td.informDate {
+      text-align: center;
+    }
+    td.informWriter {
+      text-align: center;
+    }
+  }
+  tr.hoverd1 {
+    background-color: red;
+  }
+}
+.modalBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 30px 30px;
+  top: 0; bottom: 0;
+  margin: 0 auto;
+  border: 1px solid #777;
+  background-color: rgba($color: #111111, $alpha: 0.5)
+}
+.modal{
+    position: absolute;
+    background-color: #fff;
+    width: 50%;
+    height: 50%;
+}

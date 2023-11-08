@@ -1,3 +1,19 @@
+// const NoticePage = () => {
+//   return ( 
+
+    
+//    );
+// }
+ 
+// export default NoticePage;
+  
+  
+  
+  
+  
+  
+  
+  
   // NoticePage.js
   import React, { useState, useRef , useEffect } from 'react';
   import './NoticePage.scss';
