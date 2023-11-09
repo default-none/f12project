@@ -79,7 +79,11 @@ const reducer = (state, action) => {
 const List = () => {
   const [data, dispatch] = useReducer(reducer, initialInformState);
   const [onModal, setOnModal] = useState(false);
+  const [delayModal, setDelayModal] = useState(false);
   const navigate = useNavigate();
+
+  let handleDelayModal;
+  let handleOffModal;
 
   const createData = useCallback((title, content, writer) => {
     const date = new Date().toISOString().slice(0, 10);
@@ -106,12 +110,29 @@ const List = () => {
   const handleModal = (id) => {
     navigate(`/modal/${id}`);
     setOnModal(true);
+    if (handleDelayModal) {
+      clearTimeout(handleDelayModal);
+    }
+    handleDelayModal = setTimeout(() => {
+      setDelayModal(!delayModal);
+    }, 500);
+  };
+
+  const handleModal2 = () => {
+    setDelayModal(false);
+    if (handleOffModal) {
+      clearTimeout(handleOffModal);
+    }
+
+    handleOffModal = setTimeout(() => {
+      setOnModal(false);
+    }, 500);
   };
 
   return (
     <StateContext.Provider value={{ informIndex: data.informIndex }}>
       <FunctionContext.Provider value={{ createData, editData, deleteData }}>
-        <div className={onModal ? 'back' : ''}>
+        <section className="informSection">
           <table className="ListComponent">
             <thead className="informData">
               <tr>
@@ -136,11 +157,18 @@ const List = () => {
               ))}
             </tbody>
           </table>
-          {onModal ? (<>
-            <div className="modalBack" onClick={() => setOnModal(false)}></div>
-            <Outlet/></>): null
-          }
-        </div>
+          {onModal ? (
+            <>
+              <div
+                className={delayModal ? 'modalBack op' : 'modalBack'}
+                onClick={handleModal2}
+              ></div>
+              <div className={delayModal ? ' op modal' : 'modal'}>
+                <Outlet />
+              </div>
+            </>
+          ) : null}
+        </section>
       </FunctionContext.Provider>
     </StateContext.Provider>
   );
