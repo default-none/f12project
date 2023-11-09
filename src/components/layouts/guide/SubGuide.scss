@@ -1,7 +1,7 @@
 @import '../../../style/mixin';
 .subGuide {
   width: 100%;
-  //   background-color: red;
+
   .subGuideHeader {
     height: 400px;
     text-align: center;
@@ -103,7 +103,6 @@
         .subGuideTableTitle{
           @include b18b;
           white-space: nowrap;
-          // letter-spacing: 3px;
         }
         .subGuideTableText{
           @include b18r;
@@ -173,8 +172,6 @@
                 height: 31px;
                 background: url(../../../asset/img/phone-call.png) center;
                 background-size: cover;
-                // background: url(../../../asset/img/icon.png);
-                // background-position: -121px -274px;
                 margin: 0 auto;
               }
               .faxIcon {
@@ -209,16 +206,12 @@
             width:50px; height:50px;
             background: url(../../../asset/img/subway.png) center;
             background-size: cover;
-            // background: url(../../../asset/img/icon.png) ;
-            // background-position: 0px -274px; 
             margin:0 auto;
           }
           .busIcon{
             width:50px; height:50px;
             background: url(../../../asset/img/bus.png) center;
             background-size: cover;
-            // background: url(../../../asset/img/icon.png) ;
-            // background-position: -162px -274px; 
             margin:0 auto;
           }
         }

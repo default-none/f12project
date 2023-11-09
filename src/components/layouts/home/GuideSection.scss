@@ -50,7 +50,6 @@
                 flex-direction: column;
                 align-items: end;
                 .guideText {
-                    /* background-color: #33BBC5; */
                     width: 500px;
                     padding: 10px;
                     text-align: end;
@@ -84,15 +83,15 @@
             }
         }
 }
-    .guideScreenWrap{
-        width: 65%;
-        height: 680px;
-        position: absolute;
-        left: 0; bottom: 0;
-        background-size: cover;
-        transition: transform 0.5s ease-in-out;
-        z-index: 2;
-    }
+.guideScreenImg{
+    // max-width:65%;
+    width:65%;
+    height:680px;
+    position: absolute;
+    left: 0; bottom: 0;
+    background: center no-repeat;
+    background-size: cover;
+}
 
     @include desktop{
         width: 100%;
@@ -100,7 +99,7 @@
         .sectionScreen{
             width: 100%;
         }
-        .guideScreenWrap{
+        .guideScreenImg{
             width: 68%;
         }
     }
@@ -145,7 +144,7 @@
                 }          
             }
         }
-        .guideScreenWrap{
+        .guideScreenImg{
             width: 70%;
             height: 50%;
         }
@@ -203,11 +202,12 @@
                 }
             }
         }
-        .guideScreenWrap{
+        .guideScreenImg{
             width: 100%;
             height: 60%;
         }
     }
+    
 
     @include mobileS{
         padding: 0px 20px;
@@ -255,7 +255,7 @@
                 }
             }
         }
-        .guideScreenWrap{
+        .guideScreenImg{
             width: 100%;
             height: 482px;
         }

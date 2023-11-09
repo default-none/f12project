@@ -134,15 +134,15 @@
           .hidden{
             width: 100%;
             height: 432px;
-          .bookingTicket {
-            // width: 100%;
-            // height: 432px;
-            // padding: 70px 50px 0 50px;
+            .bookingTicket {
+            .bookingTicketText{
+              padding:70px 50px;
             .bookingTicketLink { 
               margin-top: -150px;
             }
           }
         }
+      }
           .ticket1 {
             background: url(../../../asset/img/img/예약안내/1024_4_byeol.png);
           }
@@ -164,32 +164,35 @@
         }
         .bookingWrap {
           flex-direction: column;
+          .hidden{
+            height:297px;
+            padding:0;
           .bookingTicket {
-            height: 368px;
-            // padding:80px 30px 0 30px;
+          .bookingTicketText{
+            padding:50px 30px 0 30px;
             h1{
               @include w24r;
               span{
                 @include w24eb;
               }
             }
-            .bookingTicketLogo{
-            }
             .bookingTicketLink {
-              margin-top: -205px;
+              margin-top: -230px;
               a{
                 @include w16b;
               }
             }
           }
+        }
+      }
           .ticket1 {
             background: url(../../../asset/img/img/예약안내/1024_4_byeol.png)
               center;
               background-size: cover;
           }
           .ticket2 {
+            
             background: url(../../../asset/img/img/예약안내/1024_4_dal.png) center;
-            margin: 20px 0;
             background-size: cover;
           }
           .ticket3 {

@@ -71,6 +71,7 @@
 
     @include mobileF{
         padding: 0 30px;
+        height:400px;
         .footerWrap{
             flex-direction: column;
             align-items: flex-start;
@@ -184,6 +185,7 @@
 
     @include mobileF{
         padding: 0 30px;
+        height:400px;
         .footerWrap{
             flex-direction: column;
             align-items: flex-start;
