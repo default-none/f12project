@@ -1,0 +1,136 @@
+canvas {
+    width: 100%;
+    height: 100vh;
+    cursor: none;
+}
+
+
+.backGround {
+    background-color: black;
+}
+
+
+
+.title {
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    z-index: 99;
+    transition: 1s;
+}
+
+.O {
+    opacity: 1;
+}
+
+.Z {
+    position: absolute;
+    z-index: 2;
+}
+
+.scrollGuideWrap {
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    z-index: 999;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+
+    .scrollGuide1 {
+        margin: 0 auto;
+        width: 50px;
+        height: 100px;
+        border: 5px solid #fff;
+        border-radius: 75px;
+        overflow: hidden;
+        position: relative;
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 25px;
+            animation-name: scrollUp;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes scrollUp {
+            0% {
+                transform: translate(-50%, 0);
+            }
+
+            75% {
+                transform: translate(-50%, -125%);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-50%, -125%);
+                opacity: 0;
+            }
+
+
+        }
+    }
+}
+
+.scrollGuideWrap2 {
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+    z-index: 999;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+
+    .scrollGuide2 {
+        margin: 0 auto;
+        width: 50px;
+        height: 100px;
+        border: 5px solid #fff;
+        border-radius: 75px;
+        position: relative;
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 25px;
+            animation-name: scrollDown;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes scrollDown {
+            0% {
+                transform: translate(-50%, -50%);
+            }
+
+            75% {
+                transform: translate(-50%, 25%);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-50%, 25%);
+                opacity: 0;
+            }
+
+
+        }
+    }
+}
