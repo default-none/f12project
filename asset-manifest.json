@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/f12project/static/css/main.52769f14.css",
-    "main.js": "/f12project/static/js/main.171ed516.js",
+    "main.css": "/f12project/static/css/main.cc843763.css",
+    "main.js": "/f12project/static/js/main.2f0aa50e.js",
     "static/media/lantern.gltf": "/f12project/static/media/lantern.01d2ebc639cca4468957.gltf",
     "static/media/dal-21.png": "/f12project/static/media/dal-21.a5ad181853b36fb0073e.png",
     "static/media/byeol-27.png": "/f12project/static/media/byeol-27.85c14ac5ac9ca0fa243e.png",
@@ -75,6 +75,7 @@
     "static/media/rock_tile_floor_disp_1k.png": "/f12project/static/media/rock_tile_floor_disp_1k.9d28139b920e27cd4e87.png",
     "static/media/moon.png": "/f12project/static/media/moon.8e1e783884186c081350.png",
     "static/media/seokjojeon-45.png": "/f12project/static/media/seokjojeon-45.27daaf5fc58aafc1ce4c.png",
+    "static/media/milky-way-2695569_1920.jpg": "/f12project/static/media/milky-way-2695569_1920.1efa43aa888c30bb4002.jpg",
     "static/media/subtop2.png": "/f12project/static/media/subtop2.a7bfd8c19d9776afebb6.png",
     "static/media/subNoticeHeader.png": "/f12project/static/media/subNoticeHeader.81c3d17479a637e22399.png",
     "static/media/1024_4_byeol.png": "/f12project/static/media/1024_4_byeol.7be9809ec90507680c68.png",
@@ -123,11 +124,11 @@
     "static/media/footerBg.png": "/f12project/static/media/footerBg.497104cfe6bad1f5576f.png",
     "static/media/footerWeb.png": "/f12project/static/media/footerWeb.ab457bf9ca871a756137.png",
     "index.html": "/f12project/index.html",
-    "main.52769f14.css.map": "/f12project/static/css/main.52769f14.css.map",
-    "main.171ed516.js.map": "/f12project/static/js/main.171ed516.js.map"
+    "main.cc843763.css.map": "/f12project/static/css/main.cc843763.css.map",
+    "main.2f0aa50e.js.map": "/f12project/static/js/main.2f0aa50e.js.map"
   },
   "entrypoints": [
-    "static/css/main.52769f14.css",
-    "static/js/main.171ed516.js"
+    "static/css/main.cc843763.css",
+    "static/js/main.2f0aa50e.js"
   ]
 }
