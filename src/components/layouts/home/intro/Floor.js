@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 import { useLoader } from '@react-three/fiber';
 import React, { useRef } from 'react';
 import * as THREE from 'three';

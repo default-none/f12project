@@ -3,7 +3,26 @@
 .informSection {
   width: 1440px;
   margin: 0 auto;
-
+  .modeBtn {
+    opacity: 0;
+  }
+  .postInformTitle {
+    width: 100%;
+    padding: 20px;
+    @include b24r;
+    margin: 20px 0;
+  }
+  .postInoformContent {
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    @include b18r;
+    margin: 20px 0;
+  }
+  .informBtn {
+    border-radius: 0;
+    margin-right: 20px;
+  }
   .ListComponent {
     width: 100%;
     border-spacing: 0;
@@ -46,7 +65,7 @@
         transition: 1s;
       }
 
-      &:hover>td {
+      &:hover > td {
         color: map-get($map: $colors, $key: wFont01);
       }
 
@@ -68,7 +87,6 @@
     }
   }
 
-
   .modalBack {
     position: fixed;
     transition: 1s;
@@ -80,9 +98,8 @@
     opacity: 0;
     margin: 0 auto;
     z-index: 56;
-    background-color: rgba($color: #111111, $alpha: 0.5)
+    background-color: rgba($color: #111111, $alpha: 0.5);
   }
-
   .modal {
     position: fixed;
     transition: 1s;
@@ -93,30 +110,44 @@
     width: 50%;
     height: 50%;
     z-index: 57;
+    opacity: 0;
     text-align: center;
-    .modalWrap{
-      .modalTitle{
-        padding:20px 0;
+    .modalWrap {
+      .modalTitle {
+        padding: 20px 0;
         background-color: #5c5c5c31;
       }
 
-    .modalContent{
-      margin:50px 0;
-      padding:0 20px;
-      text-align: start;
-    }
-    .modalWriteDateWrap{
-      padding-top: 100px;
-      text-align: end;
-      padding-right: 50px;
-    .modalWriteDate{
-      font-weight: bold;
-    }
-    }
+      .modalContent {
+        margin: 50px 0;
+        padding: 0 20px;
+        text-align: start;
+      }
+      .modalWriteDateWrap {
+        padding-top: 100px;
+        text-align: end;
+        padding-right: 50px;
+        .modalWriteDate {
+          font-weight: bold;
+        }
+      }
     }
   }
-
   .op {
     opacity: 1;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .searchContent {
+      width: 50%;
+      height: 30px;
+      margin: 20px;
+    }
+    .searchBtn {
+      border-radius: 0;
+      height: 30px;
+    }
   }
 }

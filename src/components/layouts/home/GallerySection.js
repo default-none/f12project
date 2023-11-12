@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './GallerySection.scss';
 import byeol from '../../../asset/img/gallery/byeol-1.png';
 import GBK from '../../../asset/img/gallery/GBK.png';
 import GBK1 from '../../../asset/img/gallery/GBK-1.png';

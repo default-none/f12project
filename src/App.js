@@ -10,7 +10,10 @@ import Header from './components/layouts/Header';
 import SignUpPage from './pages/SignUpPage';
 import MembersPage from './pages/MembersPage';
 import List from './components/layouts/notice/List';
-import DetailPage from './components/layouts/notice/modal';
+import Modal from './components/layouts/notice/InformModal.js';
+import Manager from './components/layouts/notice/Manager.js';
+import FAQ from './components/layouts/notice/FAQ.js';
+import FAQModal from './components/layouts/notice/FAQModal.js';
 
 function App() {
   return (
@@ -34,7 +37,18 @@ function App() {
           <Route path="/notice/inform" element={<List />}>
             <Route
               path="/notice/inform/modal/:id"
-              element={<DetailPage />}
+              element={<Modal />}
+            ></Route>
+            <Route
+              path="/notice/inform/manager"
+              element={<Manager />}
+            ></Route>
+          </Route>
+          <Route path="/notice/faq" element={<FAQ />}>
+            <Route
+              path="/notice/faq/modal/:id"
+              element={<FAQModal />}
+              
             ></Route>
           </Route>
         </Route>

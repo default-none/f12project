@@ -13,7 +13,7 @@ import * as THREE from 'three';
 const HomePage = () => {
   const manager = new THREE.LoadingManager();
 
-  const { data, isLoading } = useQuery('threeJs', manager.onStart);
+  const { isLoading } = useQuery('threeJs', manager.onStart);
   useEffect(() => {
     const handleScroll = (event) => {
       // 화면 너비가 1024 이상인 경우에만 스크롤 이벤트 처리
@@ -50,7 +50,6 @@ const HomePage = () => {
       }
     };
   }, []); // 빈 배열을 전달하여 컴포넌트가 처음 마운트될 때만 useEffect가 호출되도록 설정
-  console.log(data);
   return (
     <main className="HomePage">
       <LoadingScreen loadingComplete={!isLoading} />

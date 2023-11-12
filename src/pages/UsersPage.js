@@ -10,7 +10,7 @@ const UsersPage = () => {
         <div>
           <div className="logo"></div>
             <input type="text" placeholder="아이디"></input>
-            <input type="text" placeholder="패스워드"></input>
+            <input type="password" placeholder="패스워드"></input>
           <div className="loginBtn">
             <p>LOGIN</p>
           </div>

@@ -4,7 +4,6 @@ import './SubGuide.scss';
 import GuideStar from './GuideStar';
 import GuideMoon from './GuideMoon';
 import GuideNight from './GuideNight';
-// import BasicButton from '../../btn/BasicButton';
 
 const SubGuide = () => {
   const { tab } = useParams();

@@ -1,5 +1,4 @@
 import Footer from '../components/layouts/Footer';
-import './SignUpPage.scss';
 
 const SignUpPage = () => {
     return <main className="SignUpPage">

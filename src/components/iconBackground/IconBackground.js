@@ -1,10 +1,9 @@
-import './IconBackground.scss';
 const IconBackground = () => {
-    return ( 
-        <div>
-            <div className="iconBackground"></div>
-        </div>
-     );
+  return (
+    <div>
+      <div className="iconBackground"></div>
+    </div>
+  );
 };
- 
+
 export default IconBackground;

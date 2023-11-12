@@ -1,6 +1,6 @@
 
 
-// Header.jsx
+  // Header.jsx
 import React, { useEffect, useState } from 'react';
 import './Header.scss';  // 이 부분은 실제 스타일 파일의 경로로 수정 필요
 import { Link } from 'react-router-dom';
